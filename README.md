@@ -30,3 +30,4 @@ Parâmetros disponíveis:
 - `--inscricoes`: Quantidade de inscrições (padrão: 100)
 - `--output`: Nome do arquivo SQL de saída (padrão: `inserts_banco_de_dados.sql`)
 - `--seed`: Seed aleatória para reproducibilidade (padrão: 42)
+
