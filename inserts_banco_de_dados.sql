@@ -1,0 +1,572 @@
+-- Script de inserção de dados sintéticos gerado automaticamente
+-- Compatível com PostgreSQL
+BEGIN;
+
+
+-- ============================================================
+-- 1. TABELA Pessoa
+-- ============================================================
+
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (1, 'Brenda Alves', '81607594285', NULL, 'samuel321@example.com', '2003-11-19', 'BRA', 'AM');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (2, 'Fernanda Silva', '02687143987', NULL, 'ccamara2@example.com', '1993-11-12', 'BRA', 'GO');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (3, 'Mateus Brito', '78130426978', NULL, 'catarina943@example.com', '2008-09-09', 'BRA', 'AL');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (4, 'Evelyn Santos', '13982650712', NULL, 'aparecidarafael4@example.com', '2006-05-16', 'BRA', 'MA');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (5, 'Sr. João Felipe Sampaio', '32798415691', NULL, 'pereiraluigi5@example.com', '1990-02-11', 'BRA', 'SC');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (6, 'Ian Andrade', '53789614084', NULL, 'isadora416@example.com', '1968-02-15', 'BRA', 'RJ');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (7, 'Vitor Gabriel da Luz', NULL, 'JO3287101', 'zpacheco7@example.com', '1978-05-26', 'ARG', 'EX');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (8, 'Otávio Peixoto', '84056723117', NULL, 'gomesgiovanna8@example.com', '1994-04-25', 'BRA', 'PB');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (9, 'Juan Lopes', '48290715323', NULL, 'mariaabreu9@example.com', '2002-11-26', 'BRA', 'SC');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (10, 'Vitor Hugo Vasconcelos', '15490683775', NULL, 'peixotoayla10@example.com', '1987-01-06', 'BRA', 'AC');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (11, 'Vitor Vargas', '24618795328', NULL, 'jose-miguelribeiro11@example.com', '1986-02-09', 'BRA', 'PI');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (12, 'Stella Machado', '08341962713', NULL, 'da-cruzrael12@example.com', '1958-02-14', 'BRA', 'MT');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (13, 'Bernardo Andrade', '73254680162', NULL, 'diego8313@example.com', '1972-09-18', 'BRA', 'RO');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (14, 'Esther Brito', '67059841202', NULL, 'ribeirolorena14@example.com', '1977-11-16', 'BRA', 'PA');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (15, 'Josué Correia', '24710358923', NULL, 'stellamachado15@example.com', '1963-04-22', 'BRA', 'PA');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (16, 'Isaac Cavalcante', '02693851424', NULL, 'emendonca16@example.com', '1968-04-23', 'BRA', 'MG');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (17, 'Dra. Raquel Cassiano', '80596432747', NULL, 'ana-carolinacunha17@example.com', '1957-09-29', 'BRA', 'RJ');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (18, 'Thomas Barros', '36147802950', NULL, 'davi-miguelpeixoto18@example.com', '1958-05-23', 'BRA', 'RO');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (19, 'Stephany Dias', NULL, 'DN6247510', 'nicolas5319@example.com', '1971-11-03', 'PRT', 'EX');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (20, 'Beatriz Barbosa', '13529864005', NULL, 'nataliada-luz20@example.com', '1962-10-12', 'BRA', 'MS');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (21, 'Letícia Ribeiro', '82497160511', NULL, 'carvalhovinicius21@example.com', '1961-08-14', 'BRA', 'AM');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (22, 'Rebeca da Cunha', '05287136471', NULL, 'borgeslavinia22@example.com', '1972-08-04', 'BRA', 'AL');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (23, 'Alexia Camargo', NULL, 'CT0598262', 'saleskaique23@example.com', '1990-11-22', 'GBR', 'EX');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (24, 'Sr. Luiz Henrique Costela', '62391570821', NULL, 'gustavofogaca24@example.com', '2006-11-07', 'BRA', 'PI');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (25, 'Sra. Maria Sophia Rios', '16083945224', NULL, 'vitorcastro25@example.com', '2007-05-07', 'BRA', 'RR');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (26, 'Ian Câmara', '41925736873', NULL, 'ribeiromatheus26@example.com', '1980-11-17', 'BRA', 'MT');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (27, 'Danilo da Luz', '65834701957', NULL, 'viniciusandrade27@example.com', '1961-02-21', 'BRA', 'RN');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (28, 'Augusto Santos', '35608249747', NULL, 'habreu28@example.com', '2008-08-24', 'BRA', 'PI');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (29, 'Sra. Sofia das Neves', '82375619455', NULL, 'zduarte29@example.com', '2001-03-18', 'BRA', 'MA');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (30, 'Agatha da Rosa', '57839162002', NULL, 'otto6930@example.com', '1995-01-18', 'BRA', 'RS');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (31, 'Antonella da Paz', '32071965868', NULL, 'francisco3431@example.com', '1969-01-19', 'BRA', 'SE');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (32, 'Evelyn Silva', NULL, 'DD2016328', 'zmonteiro32@example.com', '1970-05-15', 'ARG', 'EX');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (33, 'Isadora Campos', '89563472128', NULL, 'zcarvalho33@example.com', '1985-05-20', 'BRA', 'RO');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (34, 'Renan Machado', '34705219805', NULL, 'thales4834@example.com', '1986-09-28', 'BRA', 'RS');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (35, 'Sr. Davi Miguel Cassiano', '31692478087', NULL, 'hadassasales35@example.com', '1964-02-29', 'BRA', 'RR');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (36, 'Otto Gomes', NULL, 'ZM0546688', 'teixeiragabrielly36@example.com', '1986-03-23', 'CHL', 'EX');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (37, 'Ryan Câmara', '62714509380', NULL, 'luiza7037@example.com', '1980-03-24', 'BRA', 'MT');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (38, 'Paulo Carvalho', '53726891455', NULL, 'dcirino38@example.com', '1971-06-21', 'BRA', 'MG');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (39, 'Ravy Almeida', '09318465289', NULL, 'ferreirapietro39@example.com', '1998-01-03', 'BRA', 'AP');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (40, 'Bruna Nunes', '52167804326', NULL, 'maria-florsampaio40@example.com', '1971-03-15', 'BRA', 'SP');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (41, 'Marcos Vinicius Gonçalves', NULL, 'WI3149190', 'dompastor41@example.com', '2000-10-05', 'DEU', 'EX');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (42, 'Maria Eduarda Azevedo', NULL, 'PR6572628', 'apollo6742@example.com', '1960-12-12', 'CAN', 'EX');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (43, 'Zoe Vasconcelos', '45360278153', NULL, 'bmartins43@example.com', '2003-07-06', 'BRA', 'RJ');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (44, 'Maria Helena Fernandes', '35426789029', NULL, 'monteiroaylla44@example.com', '1966-02-20', 'BRA', 'PR');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (45, 'Esther Barros', '37890524188', NULL, 'joanamendonca45@example.com', '1991-07-18', 'BRA', 'SP');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (46, 'Srta. Lorena Ribeiro', '85973241041', NULL, 'maria-julia8846@example.com', '1977-02-27', 'BRA', 'PA');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (47, 'Gael Dias', '23857940638', NULL, 'souzastella47@example.com', '2005-08-19', 'BRA', 'RR');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (48, 'Ian Fonseca', '24078915388', NULL, 'ana-juliaalbuquerque48@example.com', '2001-12-11', 'BRA', 'PI');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (49, 'Anthony Gabriel Oliveira', NULL, 'FE2047116', 'maria-isis7749@example.com', '1976-12-13', 'ARG', 'EX');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (50, 'Ana Júlia Cassiano', '86394751219', NULL, 'ana-juliabarros50@example.com', '1970-08-27', 'BRA', 'AM');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (51, 'Mariane das Neves', '34176509252', NULL, 'pimentagael-henrique51@example.com', '2005-09-01', 'BRA', 'DF');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (52, 'Milena Sales', '47158263053', NULL, 'cda-rocha52@example.com', '1969-07-08', 'BRA', 'MA');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (53, 'Heloisa Ramos', '24830697113', NULL, 'vitorcasa-grande53@example.com', '1958-08-16', 'BRA', 'AL');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (54, 'Theodoro Nogueira', '65409182758', NULL, 'fmacedo54@example.com', '1994-06-18', 'BRA', 'AL');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (55, 'Ana Cecília Teixeira', NULL, 'EW7429671', 'maria-isismoreira55@example.com', '1998-02-06', 'ITA', 'EX');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (56, 'Lívia Duarte', '74698035139', NULL, 'castrobella56@example.com', '1981-10-11', 'BRA', 'RR');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (57, 'Lorenzo Camargo', '76014235817', NULL, 'amoraes57@example.com', '1998-07-09', 'BRA', 'PI');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (58, 'Gustavo da Mata', '10359284698', NULL, 'aliciamacedo58@example.com', '2001-04-13', 'BRA', 'PR');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (59, 'Henry Gabriel Camargo', '48936517066', NULL, 'pcampos59@example.com', '1964-03-29', 'BRA', 'PR');
+INSERT INTO Pessoa (id, nome, cpf, passaporte, email, dt_nascimento, pais, uf) VALUES (60, 'Esther Peixoto', '65490273143', NULL, 'davi-miguelda-mota60@example.com', '2006-05-06', 'BRA', 'SE');
+
+-- ============================================================
+-- 2. TABELA Associacao_a_SBTC
+-- ============================================================
+
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (2, '2021-09-09', '2022-09-09');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (4, '2020-07-20', '2021-01-16');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (4, '2026-01-01', '2026-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (4, '2028-09-01', '2028-09-30');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (4, '2025-07-01', '2025-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (5, '2025-01-01', '2025-06-30');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (7, '2021-09-05', '2021-10-05');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (10, '2019-01-01', '2019-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (10, '2023-01-01', '2023-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (10, '2020-01-01', '2020-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (10, '2025-01-01', '2025-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (11, '2023-10-16', '2024-04-13');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (12, '2028-11-21', '2029-05-20');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (12, '2023-02-01', '2023-02-28');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (12, '2026-02-08', '2026-08-07');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (12, '2021-01-01', '2021-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (13, '2020-04-01', '2020-04-30');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (13, '2021-07-01', '2021-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (15, '2020-10-24', '2021-10-24');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (16, '2024-02-01', '2024-02-29');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (16, '2022-01-01', '2022-06-30');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (16, '2021-10-01', '2021-10-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (19, '2019-02-01', '2019-07-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (19, '2028-02-03', '2028-08-01');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (19, '2026-01-01', '2026-06-30');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (23, '2022-02-05', '2022-03-07');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (23, '2020-12-18', '2021-12-18');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (24, '2023-01-01', '2023-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (24, '2019-01-01', '2019-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (24, '2025-07-01', '2025-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (25, '2021-01-01', '2021-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (25, '2022-01-12', '2023-01-12');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (25, '2023-07-20', '2024-07-19');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (25, '2024-11-26', '2024-12-26');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (26, '2026-04-08', '2027-04-08');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (26, '2021-01-01', '2021-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (27, '2026-05-02', '2027-05-02');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (28, '2020-01-17', '2021-01-16');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (28, '2027-09-01', '2027-09-30');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (28, '2021-12-01', '2021-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (28, '2022-01-01', '2022-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (30, '2019-07-01', '2019-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (30, '2028-10-19', '2029-04-17');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (30, '2026-01-01', '2026-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (31, '2019-12-06', '2020-06-03');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (31, '2023-07-01', '2023-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (31, '2021-04-22', '2022-04-22');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (32, '2024-10-01', '2024-10-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (32, '2028-01-01', '2028-06-30');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (33, '2027-02-01', '2027-02-28');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (42, '2024-01-01', '2024-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (42, '2019-01-01', '2019-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (42, '2023-01-01', '2023-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (42, '2022-01-01', '2022-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (45, '2021-10-01', '2021-10-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (45, '2028-01-01', '2028-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (45, '2023-07-18', '2024-01-14');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (45, '2025-01-01', '2025-06-30');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (46, '2024-09-01', '2024-09-30');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (46, '2027-01-01', '2027-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (46, '2023-01-01', '2023-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (47, '2027-07-01', '2027-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (47, '2024-01-01', '2024-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (47, '2026-01-01', '2026-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (47, '2025-06-01', '2025-06-30');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (48, '2026-01-01', '2026-06-30');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (49, '2028-10-01', '2028-10-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (49, '2022-07-07', '2022-08-06');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (49, '2023-01-01', '2023-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (51, '2024-01-01', '2024-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (51, '2027-07-01', '2027-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (51, '2026-12-05', '2027-06-03');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (52, '2024-02-01', '2024-02-29');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (52, '2019-10-20', '2020-04-17');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (52, '2020-07-01', '2020-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (54, '2020-08-18', '2021-08-18');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (54, '2022-07-01', '2022-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (55, '2019-07-01', '2019-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (58, '2026-05-24', '2027-05-24');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (58, '2022-10-10', '2023-04-08');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (58, '2024-04-01', '2024-04-30');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (58, '2021-01-01', '2021-12-31');
+INSERT INTO Associacao_a_SBTC (id_pessoa, dt_inicio, dt_fim) VALUES (60, '2021-01-01', '2021-06-30');
+
+-- ============================================================
+-- 3. TABELA Evento
+-- ============================================================
+
+INSERT INTO Evento (id, ano, dt_inicio, dt_fim, modalidade_edicao, nome_lote_1, dt_inicio_lote_1, dt_fim_lote_1, preco_base_lote_1, nome_lote_2, dt_inicio_lote_2, dt_fim_lote_2, preco_base_lote_2, nome_lote_3, dt_inicio_lote_3, dt_fim_lote_3, preco_base_lote_3, nome_lote_4, dt_inicio_lote_4, dt_fim_lote_4, preco_base_lote_4, sigla, nome, descricao, cidade, estado, pais, edicao, tipo, id_agregado_por) VALUES (1, 2024, '2024-03-08', '2024-03-12', 'Online', 'Lote Único', '2023-09-26', '2024-03-06', 167, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'BRACIS', 'Brazilian Conference on Intelligent Systems', 'Brazilian Conference on Intelligent Systems - 14ª Edição. Fórum acadêmico e profissional em Santos/SP.', 'Santos', 'SP', 'BRA', '14ª Edição', 'Congresso', NULL);
+INSERT INTO Evento (id, ano, dt_inicio, dt_fim, modalidade_edicao, nome_lote_1, dt_inicio_lote_1, dt_fim_lote_1, preco_base_lote_1, nome_lote_2, dt_inicio_lote_2, dt_fim_lote_2, preco_base_lote_2, nome_lote_3, dt_inicio_lote_3, dt_fim_lote_3, preco_base_lote_3, nome_lote_4, dt_inicio_lote_4, dt_fim_lote_4, preco_base_lote_4, sigla, nome, descricao, cidade, estado, pais, edicao, tipo, id_agregado_por) VALUES (2, 2024, '2024-03-08', '2024-03-12', 'Online', 'Lote Promocional', '2023-09-14', '2023-12-20', 119, 'Lote Final', '2023-12-21', '2024-03-06', 173, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'WAI', 'Workshop de Inteligência Artificial Responsável e Ética', 'Workshop de Inteligência Artificial Responsável e Ética - 15ª Edição. Evento satélite integrado ao BRACIS 2024 em Santos/SP.', 'Santos', 'SP', 'BRA', '15ª Edição', 'Workshop', 1);
+INSERT INTO Evento (id, ano, dt_inicio, dt_fim, modalidade_edicao, nome_lote_1, dt_inicio_lote_1, dt_fim_lote_1, preco_base_lote_1, nome_lote_2, dt_inicio_lote_2, dt_fim_lote_2, preco_base_lote_2, nome_lote_3, dt_inicio_lote_3, dt_fim_lote_3, preco_base_lote_3, nome_lote_4, dt_inicio_lote_4, dt_fim_lote_4, preco_base_lote_4, sigla, nome, descricao, cidade, estado, pais, edicao, tipo, id_agregado_por) VALUES (3, 2024, '2024-03-08', '2024-03-12', 'Online', 'Lote Promocional', '2023-11-01', '2023-12-19', 215, 'Lote Geral', '2023-12-20', '2024-03-12', 259, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'BBRC', 'Brazilian Robotics Conference', 'Brazilian Robotics Conference - 35ª Edição. Evento satélite integrado ao BRACIS 2024 em Santos/SP.', 'Santos', 'SP', 'BRA', '35ª Edição', 'Conferência', 1);
+INSERT INTO Evento (id, ano, dt_inicio, dt_fim, modalidade_edicao, nome_lote_1, dt_inicio_lote_1, dt_fim_lote_1, preco_base_lote_1, nome_lote_2, dt_inicio_lote_2, dt_fim_lote_2, preco_base_lote_2, nome_lote_3, dt_inicio_lote_3, dt_fim_lote_3, preco_base_lote_3, nome_lote_4, dt_inicio_lote_4, dt_fim_lote_4, preco_base_lote_4, sigla, nome, descricao, cidade, estado, pais, edicao, tipo, id_agregado_por) VALUES (4, 2027, '2027-12-10', '2027-12-16', 'Híbrido', 'Fase 1 (Lançamento)', '2027-06-07', '2027-07-05', 166, 'Fase 2 (Regular)', '2027-07-06', '2027-09-01', 244, 'Fase 3 (Última Chamada)', '2027-09-02', '2027-10-02', 304, 'Fase 4 (No Local)', '2027-10-03', '2027-12-16', 349, 'SBGames', 'Simpósio Brasileiro de Jogos e Entretenimento Digital', 'Simpósio Brasileiro de Jogos e Entretenimento Digital - 29ª Edição. Fórum acadêmico e profissional em Caruaru/PE.', 'Caruaru', 'PE', 'BRA', '29ª Edição', 'Simpósio', NULL);
+INSERT INTO Evento (id, ano, dt_inicio, dt_fim, modalidade_edicao, nome_lote_1, dt_inicio_lote_1, dt_fim_lote_1, preco_base_lote_1, nome_lote_2, dt_inicio_lote_2, dt_fim_lote_2, preco_base_lote_2, nome_lote_3, dt_inicio_lote_3, dt_fim_lote_3, preco_base_lote_3, nome_lote_4, dt_inicio_lote_4, dt_fim_lote_4, preco_base_lote_4, sigla, nome, descricao, cidade, estado, pais, edicao, tipo, id_agregado_por) VALUES (5, 2024, '2024-03-16', '2024-03-22', 'Online', 'Lote de Lançamento', '2023-12-01', '2024-01-02', 184, 'Lote Ordinário', '2024-01-04', '2024-01-26', 264, 'Lote de Encerramento', '2024-01-27', '2024-03-22', 334, NULL, NULL, NULL, NULL, 'CSBC', 'Congresso da Sociedade Brasileira de Computação', 'Congresso da Sociedade Brasileira de Computação - 44ª Edição. Fórum acadêmico e profissional em Sorocaba/SP.', 'Sorocaba', 'SP', 'BRA', '44ª Edição', 'Congresso', NULL);
+INSERT INTO Evento (id, ano, dt_inicio, dt_fim, modalidade_edicao, nome_lote_1, dt_inicio_lote_1, dt_fim_lote_1, preco_base_lote_1, nome_lote_2, dt_inicio_lote_2, dt_fim_lote_2, preco_base_lote_2, nome_lote_3, dt_inicio_lote_3, dt_fim_lote_3, preco_base_lote_3, nome_lote_4, dt_inicio_lote_4, dt_fim_lote_4, preco_base_lote_4, sigla, nome, descricao, cidade, estado, pais, edicao, tipo, id_agregado_por) VALUES (6, 2024, '2024-03-16', '2024-03-22', 'Online', 'Early Bird', '2023-11-04', '2024-01-08', 194, 'Regular', '2024-01-09', '2024-03-22', 269, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'WPerformance', 'Workshop em Desempenho de Sistemas Computacionais e de Comunicação', 'Workshop em Desempenho de Sistemas Computacionais e de Comunicação - 11ª Edição. Evento satélite integrado ao CSBC 2024 em Sorocaba/SP.', 'Sorocaba', 'SP', 'BRA', '11ª Edição', 'Workshop', 5);
+
+-- ============================================================
+-- 4. TABELA Regra_reembolso
+-- ============================================================
+
+INSERT INTO Regra_reembolso (id_evento, dt_limite, pct_devolvida) VALUES (1, '2024-01-12', 0.7500000);
+INSERT INTO Regra_reembolso (id_evento, dt_limite, pct_devolvida) VALUES (2, '2023-12-25', 0.8000000);
+INSERT INTO Regra_reembolso (id_evento, dt_limite, pct_devolvida) VALUES (2, '2024-01-04', 0.4900000);
+INSERT INTO Regra_reembolso (id_evento, dt_limite, pct_devolvida) VALUES (2, '2024-03-03', 0.2500000);
+INSERT INTO Regra_reembolso (id_evento, dt_limite, pct_devolvida) VALUES (3, '2023-12-31', 1.0000000);
+INSERT INTO Regra_reembolso (id_evento, dt_limite, pct_devolvida) VALUES (3, '2024-01-07', 0.4500000);
+INSERT INTO Regra_reembolso (id_evento, dt_limite, pct_devolvida) VALUES (4, '2027-10-10', 0.7000000);
+INSERT INTO Regra_reembolso (id_evento, dt_limite, pct_devolvida) VALUES (4, '2027-10-30', 0.3600000);
+INSERT INTO Regra_reembolso (id_evento, dt_limite, pct_devolvida) VALUES (6, '2024-02-10', 0.8500000);
+INSERT INTO Regra_reembolso (id_evento, dt_limite, pct_devolvida) VALUES (6, '2024-02-20', 0.4600000);
+
+-- ============================================================
+-- 5. TABELA Categoria_inscricao
+-- ============================================================
+
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (1, 0.5000000, 'Estudante de Graduação', 'Comprovante de matrícula obrigatório', 1);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (2, 0.7000000, 'Estudante de Pós-Graduação', 'Comprovante de pós-graduação obrigatório', 1);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (3, 0.8000000, 'Profissional Associado SBTC', 'Desconto exclusivo para membros ativos da SBTC', 1);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (4, 1.0000000, 'Profissional Não Associado', 'Inscrição padrão da categoria profissional', 1);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (5, 0E-7, 'Palestrante / Autor Convidado', 'Inscrição isenta para palestrantes convidados', 1);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (6, 0.5000000, 'Estudante de Graduação', 'Comprovante de matrícula obrigatório', 2);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (7, 0.7000000, 'Estudante de Pós-Graduação', 'Comprovante de pós-graduação obrigatório', 2);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (8, 0.8000000, 'Profissional Associado SBTC', 'Desconto exclusivo para membros ativos da SBTC', 2);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (9, 1.0000000, 'Profissional Não Associado', 'Inscrição padrão da categoria profissional', 2);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (10, 0E-7, 'Palestrante / Autor Convidado', 'Inscrição isenta para palestrantes convidados', 2);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (11, 0.5000000, 'Estudante de Graduação', 'Comprovante de matrícula obrigatório', 3);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (12, 0.7000000, 'Estudante de Pós-Graduação', 'Comprovante de pós-graduação obrigatório', 3);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (13, 0.8000000, 'Profissional Associado SBTC', 'Desconto exclusivo para membros ativos da SBTC', 3);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (14, 1.0000000, 'Profissional Não Associado', 'Inscrição padrão da categoria profissional', 3);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (15, 0E-7, 'Palestrante / Autor Convidado', 'Inscrição isenta para palestrantes convidados', 3);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (16, 0.5000000, 'Estudante de Graduação', 'Comprovante de matrícula obrigatório', 4);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (17, 0.7000000, 'Estudante de Pós-Graduação', 'Comprovante de pós-graduação obrigatório', 4);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (18, 0.8000000, 'Profissional Associado SBTC', 'Desconto exclusivo para membros ativos da SBTC', 4);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (19, 1.0000000, 'Profissional Não Associado', 'Inscrição padrão da categoria profissional', 4);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (20, 0E-7, 'Palestrante / Autor Convidado', 'Inscrição isenta para palestrantes convidados', 4);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (21, 0.5000000, 'Estudante de Graduação', 'Comprovante de matrícula obrigatório', 5);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (22, 0.7000000, 'Estudante de Pós-Graduação', 'Comprovante de pós-graduação obrigatório', 5);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (23, 0.8000000, 'Profissional Associado SBTC', 'Desconto exclusivo para membros ativos da SBTC', 5);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (24, 1.0000000, 'Profissional Não Associado', 'Inscrição padrão da categoria profissional', 5);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (25, 0E-7, 'Palestrante / Autor Convidado', 'Inscrição isenta para palestrantes convidados', 5);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (26, 0.5000000, 'Estudante de Graduação', 'Comprovante de matrícula obrigatório', 6);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (27, 0.7000000, 'Estudante de Pós-Graduação', 'Comprovante de pós-graduação obrigatório', 6);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (28, 0.8000000, 'Profissional Associado SBTC', 'Desconto exclusivo para membros ativos da SBTC', 6);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (29, 1.0000000, 'Profissional Não Associado', 'Inscrição padrão da categoria profissional', 6);
+INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES (30, 0E-7, 'Palestrante / Autor Convidado', 'Inscrição isenta para palestrantes convidados', 6);
+
+-- ============================================================
+-- 6. TABELA Atividade
+-- ============================================================
+
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (1, 60, 0.00, '2024-03-08 16:00:00', '2024-03-08 17:00:00', 'Sessão Técnica: Modelagem e Otimização em Banco de Dados Relacionais e NoSQL', 'Sessão Técnica', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (2, NULL, 75.00, '2024-03-10 16:00:00', '2024-03-10 18:00:00', 'Minicurso: Boas Práticas de DevOps e Arquitetura de Microsserviços', 'Minicurso', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (3, 250, 42.00, '2024-03-12 18:00:00', '2024-03-12 21:00:00', 'Minicurso: Boas Práticas de DevOps e Arquitetura de Microsserviços', 'Minicurso', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (4, 150, 0.00, '2024-03-10 18:00:00', '2024-03-10 20:00:00', 'Palestra: Computação Quântica: Fundamentos e Perspectivas', 'Palestra', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (5, 250, 0.00, '2024-03-12 16:00:00', '2024-03-12 17:00:00', 'Mesa Redonda: Computação Quântica: Fundamentos e Perspectivas', 'Mesa Redonda', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (6, 250, 0.00, '2024-03-12 16:00:00', '2024-03-12 18:00:00', 'Mesa Redonda: Sistemas Embarcados e Internet das Coisas (IoT)', 'Mesa Redonda', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (7, 250, 79.00, '2024-03-11 09:00:00', '2024-03-11 11:00:00', 'Minicurso: Engenharia de Software para Sistemas Críticos', 'Minicurso', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (8, NULL, 0.00, '2024-03-09 16:00:00', '2024-03-09 17:00:00', 'Sessão Técnica: Processamento de Linguagem Natural com LLMs', 'Sessão Técnica', 10);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (9, 150, 0.00, '2024-03-08 18:00:00', '2024-03-08 20:00:00', 'Mesa Redonda: Modelagem e Otimização em Banco de Dados Relacionais e NoSQL', 'Mesa Redonda', 7);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (10, 150, 0.00, '2024-03-10 14:00:00', '2024-03-10 17:00:00', 'Minicurso: Modelagem e Otimização em Banco de Dados Relacionais e NoSQL', 'Minicurso', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (11, NULL, 0.00, '2024-03-12 16:00:00', '2024-03-12 18:00:00', 'Palestra: Sistemas Embarcados e Internet das Coisas (IoT)', 'Palestra', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (12, 250, 0.00, '2024-03-08 11:00:00', '2024-03-08 14:00:00', 'Sessão Técnica: Avanços em Inteligência Artificial Generativa', 'Sessão Técnica', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (13, NULL, 0.00, '2024-03-08 16:00:00', '2024-03-08 17:00:00', 'Mesa Redonda: Engenharia de Software para Sistemas Críticos', 'Mesa Redonda', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (14, 60, 0.00, '2027-12-15 14:00:00', '2027-12-15 15:00:00', 'Palestra: Boas Práticas de DevOps e Arquitetura de Microsserviços', 'Palestra', 16);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (15, 100, 0.00, '2027-12-13 11:00:00', '2027-12-13 12:00:00', 'Mesa Redonda: Sistemas Embarcados e Internet das Coisas (IoT)', 'Mesa Redonda', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (16, 60, 0.00, '2027-12-11 09:00:00', '2027-12-11 12:00:00', 'Painel: Segurança da Informação e Privacidade de Dados em Nuvem', 'Painel', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (17, 150, 0.00, '2027-12-14 11:00:00', '2027-12-14 12:00:00', 'Painel: Engenharia de Software para Sistemas Críticos', 'Painel', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (18, 100, 0.00, '2027-12-15 09:00:00', '2027-12-15 11:00:00', 'Mesa Redonda: Boas Práticas de DevOps e Arquitetura de Microsserviços', 'Mesa Redonda', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (19, 40, 0.00, '2024-03-19 14:00:00', '2024-03-19 17:00:00', 'Painel: Segurança da Informação e Privacidade de Dados em Nuvem', 'Painel', 24);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (20, 100, 0.00, '2024-03-17 16:00:00', '2024-03-17 18:00:00', 'Mesa Redonda: Boas Práticas de DevOps e Arquitetura de Microsserviços', 'Mesa Redonda', 24);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (21, 250, 0.00, '2024-03-18 14:00:00', '2024-03-18 15:00:00', 'Painel: Sistemas Embarcados e Internet das Coisas (IoT)', 'Painel', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (22, 40, 0.00, '2024-03-20 09:00:00', '2024-03-20 12:00:00', 'Sessão Técnica: Computação Quântica: Fundamentos e Perspectivas', 'Sessão Técnica', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (23, 250, 0.00, '2024-03-22 14:00:00', '2024-03-22 15:00:00', 'Mesa Redonda: Engenharia de Software para Sistemas Críticos', 'Mesa Redonda', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (24, NULL, 0.00, '2024-03-16 09:00:00', '2024-03-16 11:00:00', 'Mesa Redonda: Segurança da Informação e Privacidade de Dados em Nuvem', 'Mesa Redonda', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (25, NULL, 0.00, '2024-03-17 09:00:00', '2024-03-17 11:00:00', 'Palestra: Sistemas Embarcados e Internet das Coisas (IoT)', 'Palestra', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (26, 60, 0.00, '2024-03-17 18:00:00', '2024-03-17 20:00:00', 'Sessão Técnica: Segurança da Informação e Privacidade de Dados em Nuvem', 'Sessão Técnica', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (27, 100, 0.00, '2024-03-22 16:00:00', '2024-03-22 18:00:00', 'Mesa Redonda: Segurança da Informação e Privacidade de Dados em Nuvem', 'Mesa Redonda', NULL);
+INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES (28, 150, 0.00, '2024-03-16 11:00:00', '2024-03-16 12:00:00', 'Mesa Redonda: Modelagem e Otimização em Banco de Dados Relacionais e NoSQL', 'Mesa Redonda', NULL);
+
+-- ============================================================
+-- 7. TABELA Inscricao
+-- ============================================================
+
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (1, '2024-03-22 23:36:23', '2024-03-21 20:35:23', 22, 47);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (2, '2023-11-13 05:42:47', '2023-11-11 13:43:47', 9, 1);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (3, '2024-02-27 04:05:14', '2024-02-25 09:43:14', 27, 25);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (4, '2027-06-27 19:27:04', '2027-06-26 11:41:04', 18, 57);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (5, NULL, '2023-12-27 09:08:02', 23, 59);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (6, '2027-06-15 23:58:08', '2027-06-14 22:34:08', 16, 20);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (7, '2024-01-22 19:01:47', '2024-01-21 14:37:47', 24, 43);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (8, '2024-03-02 05:11:02', '2024-03-01 14:17:02', 4, 42);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (9, '2024-02-06 05:49:23', '2024-02-04 09:43:23', 15, 29);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (10, '2023-11-15 07:13:52', '2023-11-13 09:54:52', 2, 23);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (11, '2024-01-04 17:30:21', '2024-01-04 08:50:21', 21, 14);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (12, '2027-07-04 12:34:13', '2027-07-03 20:35:13', 19, 51);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (13, NULL, '2023-12-01 12:54:09', 25, 22);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (14, '2024-01-05 19:27:01', '2024-01-04 18:55:01', 9, 35);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (15, '2023-12-16 13:00:16', '2023-12-15 08:11:16', 26, 51);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (16, '2024-01-25 23:20:23', '2024-01-25 15:49:23', 4, 34);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (17, NULL, '2027-06-26 08:46:50', 17, 29);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (18, NULL, '2027-06-27 08:03:30', 17, 43);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (19, '2023-12-29 20:09:05', '2023-12-29 09:57:05', 22, 28);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (20, '2024-03-08 10:26:45', '2024-03-06 17:35:45', 5, 5);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (21, '2023-12-02 10:52:50', '2023-11-30 14:06:50', 10, 34);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (22, '2024-02-06 13:41:56', '2024-02-05 14:28:56', 29, 42);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (23, '2023-12-18 02:49:27', '2023-12-17 09:20:27', 15, 53);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (24, '2024-01-26 14:38:53', '2024-01-25 09:05:53', 5, 24);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (25, NULL, '2024-01-08 16:03:37', 24, 7);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (26, NULL, '2024-02-10 13:55:42', 11, 36);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (27, '2024-01-17 04:10:19', '2024-01-15 12:38:19', 28, 28);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (28, '2023-11-16 01:57:06', '2023-11-14 11:54:06', 7, 33);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (29, NULL, '2023-11-07 21:35:49', 9, 49);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (30, NULL, '2024-01-04 17:59:42', 22, 40);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (31, '2023-12-15 08:12:22', '2023-12-14 22:21:22', 1, 18);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (32, '2023-12-12 07:57:01', '2023-12-10 19:40:01', 22, 37);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (33, '2023-11-24 01:12:19', '2023-11-22 10:23:19', 13, 14);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (34, '2023-11-04 16:27:39', '2023-11-04 10:48:39', 3, 39);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (35, '2024-02-22 04:31:26', '2024-02-20 17:28:26', 15, 18);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (36, '2023-11-21 16:20:37', '2023-11-19 18:43:37', 12, 8);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (37, '2024-02-26 22:30:13', '2024-02-26 08:00:13', 2, 20);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (38, '2023-12-10 18:35:00', '2023-12-09 13:07:00', 5, 50);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (39, '2023-11-24 16:50:53', '2023-11-23 16:35:53', 5, 12);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (40, NULL, '2023-12-25 14:01:29', 13, 5);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (41, '2023-12-07 22:41:40', '2023-12-07 14:45:40', 11, 56);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (42, NULL, '2023-11-08 20:39:29', 1, 26);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (43, '2023-11-07 16:54:37', '2023-11-07 11:27:37', 12, 59);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (44, '2023-12-18 22:16:49', '2023-12-17 11:21:49', 28, 26);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (45, '2023-11-16 18:57:22', '2023-11-14 22:49:22', 4, 41);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (46, '2023-11-04 09:01:11', '2023-11-02 12:12:11', 5, 53);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (47, '2024-02-23 22:31:36', '2024-02-22 15:48:36', 6, 5);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (48, '2024-02-20 02:24:20', '2024-02-19 21:40:20', 30, 44);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (49, '2024-01-25 14:19:22', '2024-01-24 17:03:22', 15, 31);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (50, '2023-11-25 03:32:04', '2023-11-24 21:18:04', 15, 30);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (51, '2027-08-04 20:28:50', '2027-08-04 17:35:50', 20, 40);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (52, '2024-02-02 17:56:30', '2024-02-02 13:38:30', 30, 29);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (53, '2023-12-22 21:50:32', '2023-12-22 19:05:32', 4, 29);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (54, '2023-12-30 18:05:39', '2023-12-29 16:33:39', 23, 16);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (55, '2023-10-29 14:54:03', '2023-10-27 18:38:03', 10, 59);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (56, '2024-02-17 15:18:18', '2024-02-15 18:24:18', 3, 22);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (57, '2027-09-13 09:34:42', '2027-09-12 09:37:42', 20, 59);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (58, NULL, '2024-01-16 10:38:45', 21, 20);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (59, NULL, '2024-01-08 18:44:53', 21, 25);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (60, '2023-12-24 23:05:19', '2023-12-24 08:23:19', 22, 42);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (61, NULL, '2023-10-01 10:04:18', 7, 32);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (62, '2027-08-29 19:00:33', '2027-08-28 19:56:33', 17, 7);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (63, '2024-01-25 13:31:10', '2024-01-23 14:09:10', 25, 57);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (64, '2027-07-18 17:43:02', '2027-07-16 19:28:02', 20, 50);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (65, '2024-01-28 09:19:50', '2024-01-26 20:47:50', 8, 47);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (66, '2024-02-21 13:54:12', '2024-02-19 22:53:12', 10, 16);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (67, NULL, '2024-02-23 16:26:10', 10, 50);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (68, NULL, '2027-06-15 08:41:30', 20, 52);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (69, '2023-11-20 18:50:48', '2023-11-19 12:05:48', 30, 36);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (70, NULL, '2027-06-20 09:58:14', 17, 58);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (71, '2024-02-12 10:51:32', '2024-02-11 08:25:32', 12, 57);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (72, '2023-11-22 21:04:53', '2023-11-21 22:06:53', 12, 6);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (73, '2023-12-09 08:26:30', '2023-12-08 22:53:30', 5, 51);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (74, '2023-12-02 08:22:01', '2023-12-01 22:05:01', 23, 49);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (75, '2024-01-17 18:13:18', '2024-01-17 09:49:18', 24, 36);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (76, NULL, '2023-12-02 15:04:07', 8, 4);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (77, '2027-08-16 12:34:15', '2027-08-15 16:36:15', 20, 32);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (78, '2023-11-26 23:21:11', '2023-11-26 17:26:11', 1, 28);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (79, NULL, '2023-12-04 16:32:50', 12, 34);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (80, NULL, '2024-01-24 08:40:24', 1, 36);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (81, '2023-12-05 20:24:46', '2023-12-05 13:15:46', 24, 17);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (82, NULL, '2023-12-03 13:34:21', 25, 48);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (83, '2024-03-09 04:47:40', '2024-03-08 19:30:40', 27, 12);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (84, '2024-01-18 22:00:12', '2024-01-18 08:18:12', 23, 5);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (85, '2023-12-15 09:47:52', '2023-12-14 16:25:52', 2, 57);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (86, '2024-01-15 10:45:49', '2024-01-13 13:55:49', 25, 3);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (87, '2023-11-01 17:24:25', '2023-10-31 14:56:25', 9, 22);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (88, '2023-12-20 01:33:46', '2023-12-18 20:05:46', 23, 32);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (89, '2023-12-12 09:21:05', '2023-12-11 13:06:05', 27, 39);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (90, '2024-02-12 13:42:28', '2024-02-12 10:44:28', 15, 20);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (91, NULL, '2024-03-04 12:40:50', 28, 47);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (92, '2023-12-20 11:43:01', '2023-12-18 18:10:01', 13, 41);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (93, '2023-12-28 23:57:36', '2023-12-28 13:24:36', 3, 9);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (94, '2024-02-07 04:01:04', '2024-02-05 15:48:04', 15, 44);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (95, '2023-11-19 21:16:01', '2023-11-18 11:07:01', 13, 24);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (96, '2024-02-17 21:15:18', '2024-02-16 11:39:18', 9, 8);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (97, '2023-10-14 21:15:57', '2023-10-14 15:11:57', 4, 13);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (98, '2024-02-18 07:27:45', '2024-02-16 18:22:45', 22, 52);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (99, '2023-11-25 07:43:59', '2023-11-24 19:45:59', 29, 19);
+INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES (100, '2023-11-09 21:38:08', '2023-11-08 11:50:08', 12, 51);
+
+-- ============================================================
+-- 8. TABELA Item_financeiro
+-- ============================================================
+
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (1, '2024-03-22 23:36:23', '2024-03-31 23:36:23', 1, 'Inscrição CSBC 2024 - Estudante de Pós-Graduação (Lote de Encerramento)', 233.80, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (2, '2023-11-13 05:42:47', NULL, 2, 'Inscrição WAI 2024 - Profissional Não Associado (Lote Promocional)', 119.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (3, '2024-02-27 04:05:14', NULL, 3, 'Inscrição WPerformance 2024 - Estudante de Pós-Graduação (Regular)', 188.30, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (4, '2027-06-27 19:27:04', NULL, 4, 'Inscrição SBGames 2027 - Profissional Associado SBTC (Fase 1 (Lançamento))', 132.80, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (5, NULL, '2023-12-30 09:08:02', 5, 'Inscrição CSBC 2024 - Profissional Associado SBTC (Lote de Lançamento)', 147.20, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (6, '2027-06-15 23:58:08', NULL, 6, 'Inscrição SBGames 2027 - Estudante de Graduação (Fase 1 (Lançamento))', 83.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (7, '2024-01-22 19:01:47', NULL, 7, 'Inscrição CSBC 2024 - Profissional Não Associado (Lote Ordinário)', 264.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (8, '2024-03-02 05:11:02', NULL, 8, 'Inscrição BRACIS 2024 - Profissional Não Associado (Lote Único)', 167.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (9, '2024-02-06 05:49:23', NULL, 9, 'Inscrição BBRC 2024 - Palestrante / Autor Convidado (Lote Geral)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (10, '2023-11-15 07:13:52', NULL, 10, 'Inscrição BRACIS 2024 - Estudante de Pós-Graduação (Lote Único)', 116.90, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (11, '2024-01-04 17:30:21', NULL, 11, 'Inscrição CSBC 2024 - Estudante de Graduação (Lote Ordinário)', 132.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (12, '2027-07-04 12:34:13', NULL, 12, 'Inscrição SBGames 2027 - Profissional Não Associado (Fase 1 (Lançamento))', 166.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (13, NULL, '2023-12-06 12:54:09', 13, 'Inscrição CSBC 2024 - Palestrante / Autor Convidado (Lote de Lançamento)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (14, '2024-01-05 19:27:01', NULL, 14, 'Inscrição WAI 2024 - Profissional Não Associado (Lote Final)', 173.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (15, '2023-12-16 13:00:16', NULL, 15, 'Inscrição WPerformance 2024 - Estudante de Graduação (Early Bird)', 97.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (16, '2024-01-25 23:20:23', NULL, 16, 'Inscrição BRACIS 2024 - Profissional Não Associado (Lote Único)', 167.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (17, NULL, '2027-07-03 08:46:50', 17, 'Inscrição SBGames 2027 - Estudante de Pós-Graduação (Fase 1 (Lançamento))', 116.20, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (18, NULL, NULL, 18, 'Inscrição SBGames 2027 - Estudante de Pós-Graduação (Fase 1 (Lançamento))', 116.20, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (19, '2023-12-29 20:09:05', NULL, 19, 'Inscrição CSBC 2024 - Estudante de Pós-Graduação (Lote de Lançamento)', 128.80, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (20, '2024-03-08 10:26:45', NULL, 20, 'Inscrição BRACIS 2024 - Palestrante / Autor Convidado (Lote Único)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (21, '2023-12-02 10:52:50', NULL, 21, 'Inscrição WAI 2024 - Palestrante / Autor Convidado (Lote Promocional)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (22, '2024-02-06 13:41:56', NULL, 22, 'Inscrição WPerformance 2024 - Profissional Não Associado (Regular)', 269.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (23, '2023-12-18 02:49:27', NULL, 23, 'Inscrição BBRC 2024 - Palestrante / Autor Convidado (Lote Promocional)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (24, '2024-01-26 14:38:53', NULL, 24, 'Inscrição BRACIS 2024 - Palestrante / Autor Convidado (Lote Único)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (25, NULL, '2024-01-12 16:03:37', 25, 'Inscrição CSBC 2024 - Profissional Não Associado (Lote Ordinário)', 264.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (26, NULL, '2024-02-14 13:55:42', 26, 'Inscrição BBRC 2024 - Estudante de Graduação (Lote Geral)', 129.50, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (27, '2024-01-17 04:10:19', NULL, 27, 'Inscrição WPerformance 2024 - Profissional Associado SBTC (Regular)', 215.20, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (28, '2023-11-16 01:57:06', NULL, 28, 'Inscrição WAI 2024 - Estudante de Pós-Graduação (Lote Promocional)', 83.30, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (29, NULL, NULL, 29, 'Inscrição WAI 2024 - Profissional Não Associado (Lote Promocional)', 119.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (30, NULL, NULL, 30, 'Inscrição CSBC 2024 - Estudante de Pós-Graduação (Lote Ordinário)', 184.80, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (31, '2023-12-15 08:12:22', NULL, 31, 'Inscrição BRACIS 2024 - Estudante de Graduação (Lote Único)', 83.50, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (32, '2023-12-12 07:57:01', NULL, 32, 'Inscrição CSBC 2024 - Estudante de Pós-Graduação (Lote de Lançamento)', 128.80, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (33, '2023-11-24 01:12:19', NULL, 33, 'Inscrição BBRC 2024 - Profissional Associado SBTC (Lote Promocional)', 172.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (34, '2023-11-04 16:27:39', NULL, 34, 'Inscrição BRACIS 2024 - Profissional Associado SBTC (Lote Único)', 133.60, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (35, '2024-02-22 04:31:26', NULL, 35, 'Inscrição BBRC 2024 - Palestrante / Autor Convidado (Lote Geral)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (36, '2023-11-21 16:20:37', NULL, 36, 'Inscrição BBRC 2024 - Estudante de Pós-Graduação (Lote Promocional)', 150.50, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (37, '2024-02-26 22:30:13', NULL, 37, 'Inscrição BRACIS 2024 - Estudante de Pós-Graduação (Lote Único)', 116.90, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (38, '2023-12-10 18:35:00', NULL, 38, 'Inscrição BRACIS 2024 - Palestrante / Autor Convidado (Lote Único)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (39, '2023-11-24 16:50:53', NULL, 39, 'Inscrição BRACIS 2024 - Palestrante / Autor Convidado (Lote Único)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (40, NULL, '2024-01-01 14:01:29', 40, 'Inscrição BBRC 2024 - Profissional Associado SBTC (Lote Geral)', 207.20, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (41, '2023-12-07 22:41:40', NULL, 41, 'Inscrição BBRC 2024 - Estudante de Graduação (Lote Promocional)', 107.50, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (42, NULL, NULL, 42, 'Inscrição BRACIS 2024 - Estudante de Graduação (Lote Único)', 83.50, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (43, '2023-11-07 16:54:37', NULL, 43, 'Inscrição BBRC 2024 - Estudante de Pós-Graduação (Lote Promocional)', 150.50, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (44, '2023-12-18 22:16:49', NULL, 44, 'Inscrição WPerformance 2024 - Profissional Associado SBTC (Early Bird)', 155.20, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (45, '2023-11-16 18:57:22', NULL, 45, 'Inscrição BRACIS 2024 - Profissional Não Associado (Lote Único)', 167.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (46, '2023-11-04 09:01:11', '2023-11-05 09:01:11', 46, 'Inscrição BRACIS 2024 - Palestrante / Autor Convidado (Lote Único)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (47, '2024-02-23 22:31:36', NULL, 47, 'Inscrição WAI 2024 - Estudante de Graduação (Lote Final)', 86.50, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (48, '2024-02-20 02:24:20', NULL, 48, 'Inscrição WPerformance 2024 - Palestrante / Autor Convidado (Regular)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (49, '2024-01-25 14:19:22', NULL, 49, 'Inscrição BBRC 2024 - Palestrante / Autor Convidado (Lote Geral)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (50, '2023-11-25 03:32:04', NULL, 50, 'Inscrição BBRC 2024 - Palestrante / Autor Convidado (Lote Promocional)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (51, '2027-08-04 20:28:50', NULL, 51, 'Inscrição SBGames 2027 - Palestrante / Autor Convidado (Fase 2 (Regular))', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (52, '2024-02-02 17:56:30', NULL, 52, 'Inscrição WPerformance 2024 - Palestrante / Autor Convidado (Regular)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (53, '2023-12-22 21:50:32', '2023-12-31 21:50:32', 53, 'Inscrição BRACIS 2024 - Profissional Não Associado (Lote Único)', 167.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (54, '2023-12-30 18:05:39', NULL, 54, 'Inscrição CSBC 2024 - Profissional Associado SBTC (Lote de Lançamento)', 147.20, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (55, '2023-10-29 14:54:03', NULL, 55, 'Inscrição WAI 2024 - Palestrante / Autor Convidado (Lote Promocional)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (56, '2024-02-17 15:18:18', NULL, 56, 'Inscrição BRACIS 2024 - Profissional Associado SBTC (Lote Único)', 133.60, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (57, '2027-09-13 09:34:42', NULL, 57, 'Inscrição SBGames 2027 - Palestrante / Autor Convidado (Fase 3 (Última Chamada))', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (58, NULL, NULL, 58, 'Inscrição CSBC 2024 - Estudante de Graduação (Lote Ordinário)', 132.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (59, NULL, '2024-01-11 18:44:53', 59, 'Inscrição CSBC 2024 - Estudante de Graduação (Lote Ordinário)', 132.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (60, '2023-12-24 23:05:19', NULL, 60, 'Inscrição CSBC 2024 - Estudante de Pós-Graduação (Lote de Lançamento)', 128.80, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (61, NULL, '2023-10-07 10:04:18', 61, 'Inscrição WAI 2024 - Estudante de Pós-Graduação (Lote Promocional)', 83.30, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (62, '2027-08-29 19:00:33', NULL, 62, 'Inscrição SBGames 2027 - Estudante de Pós-Graduação (Fase 2 (Regular))', 170.80, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (63, '2024-01-25 13:31:10', NULL, 63, 'Inscrição CSBC 2024 - Palestrante / Autor Convidado (Lote Ordinário)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (64, '2027-07-18 17:43:02', NULL, 64, 'Inscrição SBGames 2027 - Palestrante / Autor Convidado (Fase 2 (Regular))', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (65, '2024-01-28 09:19:50', NULL, 65, 'Inscrição WAI 2024 - Profissional Associado SBTC (Lote Final)', 138.40, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (66, '2024-02-21 13:54:12', NULL, 66, 'Inscrição WAI 2024 - Palestrante / Autor Convidado (Lote Final)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (67, NULL, NULL, 67, 'Inscrição WAI 2024 - Palestrante / Autor Convidado (Lote Final)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (68, NULL, NULL, 68, 'Inscrição SBGames 2027 - Palestrante / Autor Convidado (Fase 1 (Lançamento))', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (69, '2023-11-20 18:50:48', NULL, 69, 'Inscrição WPerformance 2024 - Palestrante / Autor Convidado (Early Bird)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (70, NULL, '2027-06-25 09:58:14', 70, 'Inscrição SBGames 2027 - Estudante de Pós-Graduação (Fase 1 (Lançamento))', 116.20, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (71, '2024-02-12 10:51:32', NULL, 71, 'Inscrição BBRC 2024 - Estudante de Pós-Graduação (Lote Geral)', 181.30, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (72, '2023-11-22 21:04:53', NULL, 72, 'Inscrição BBRC 2024 - Estudante de Pós-Graduação (Lote Promocional)', 150.50, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (73, '2023-12-09 08:26:30', NULL, 73, 'Inscrição BRACIS 2024 - Palestrante / Autor Convidado (Lote Único)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (74, '2023-12-02 08:22:01', NULL, 74, 'Inscrição CSBC 2024 - Profissional Associado SBTC (Lote de Lançamento)', 147.20, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (75, '2024-01-17 18:13:18', NULL, 75, 'Inscrição CSBC 2024 - Profissional Não Associado (Lote Ordinário)', 264.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (76, NULL, '2023-12-05 15:04:07', 76, 'Inscrição WAI 2024 - Profissional Associado SBTC (Lote Promocional)', 95.20, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (77, '2027-08-16 12:34:15', NULL, 77, 'Inscrição SBGames 2027 - Palestrante / Autor Convidado (Fase 2 (Regular))', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (78, '2023-11-26 23:21:11', NULL, 78, 'Inscrição BRACIS 2024 - Estudante de Graduação (Lote Único)', 83.50, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (79, NULL, NULL, 79, 'Inscrição BBRC 2024 - Estudante de Pós-Graduação (Lote Promocional)', 150.50, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (80, NULL, '2024-01-28 08:40:24', 80, 'Inscrição BRACIS 2024 - Estudante de Graduação (Lote Único)', 83.50, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (81, '2023-12-05 20:24:46', NULL, 81, 'Inscrição CSBC 2024 - Profissional Não Associado (Lote de Lançamento)', 184.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (82, NULL, NULL, 82, 'Inscrição CSBC 2024 - Palestrante / Autor Convidado (Lote de Lançamento)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (83, '2024-03-09 04:47:40', NULL, 83, 'Inscrição WPerformance 2024 - Estudante de Pós-Graduação (Regular)', 188.30, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (84, '2024-01-18 22:00:12', NULL, 84, 'Inscrição CSBC 2024 - Profissional Associado SBTC (Lote Ordinário)', 211.20, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (85, '2023-12-15 09:47:52', NULL, 85, 'Inscrição BRACIS 2024 - Estudante de Pós-Graduação (Lote Único)', 116.90, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (86, '2024-01-15 10:45:49', NULL, 86, 'Inscrição CSBC 2024 - Palestrante / Autor Convidado (Lote Ordinário)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (87, '2023-11-01 17:24:25', NULL, 87, 'Inscrição WAI 2024 - Profissional Não Associado (Lote Promocional)', 119.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (88, '2023-12-20 01:33:46', NULL, 88, 'Inscrição CSBC 2024 - Profissional Associado SBTC (Lote de Lançamento)', 147.20, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (89, '2023-12-12 09:21:05', NULL, 89, 'Inscrição WPerformance 2024 - Estudante de Pós-Graduação (Early Bird)', 135.80, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (90, '2024-02-12 13:42:28', NULL, 90, 'Inscrição BBRC 2024 - Palestrante / Autor Convidado (Lote Geral)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (91, NULL, '2024-03-10 12:40:50', 91, 'Inscrição WPerformance 2024 - Profissional Associado SBTC (Regular)', 215.20, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (92, '2023-12-20 11:43:01', NULL, 92, 'Inscrição BBRC 2024 - Profissional Associado SBTC (Lote Promocional)', 172.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (93, '2023-12-28 23:57:36', NULL, 93, 'Inscrição BRACIS 2024 - Profissional Associado SBTC (Lote Único)', 133.60, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (94, '2024-02-07 04:01:04', NULL, 94, 'Inscrição BBRC 2024 - Palestrante / Autor Convidado (Lote Geral)', 0.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (95, '2023-11-19 21:16:01', NULL, 95, 'Inscrição BBRC 2024 - Profissional Associado SBTC (Lote Promocional)', 172.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (96, '2024-02-17 21:15:18', NULL, 96, 'Inscrição WAI 2024 - Profissional Não Associado (Lote Final)', 173.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (97, '2023-10-14 21:15:57', NULL, 97, 'Inscrição BRACIS 2024 - Profissional Não Associado (Lote Único)', 167.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (98, '2024-02-18 07:27:45', NULL, 98, 'Inscrição CSBC 2024 - Estudante de Pós-Graduação (Lote de Encerramento)', 233.80, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (99, '2023-11-25 07:43:59', NULL, 99, 'Inscrição WPerformance 2024 - Profissional Não Associado (Early Bird)', 194.00, 'Inscrição');
+INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES (100, '2023-11-09 21:38:08', NULL, 100, 'Inscrição BBRC 2024 - Estudante de Pós-Graduação (Lote Promocional)', 150.50, 'Inscrição');
+
+-- ============================================================
+-- 9. TABELA Pagamento
+-- ============================================================
+
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (1, 'Inscrição', 233.80, '2024-03-21 20:35:23', '2024-03-22 23:36:23', 'PAY-YDUM-27875588', 'PIX', NULL, 1);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (2, 'Inscrição', 119.00, '2023-11-11 13:43:47', '2023-11-13 05:42:47', 'PAY-TZYY-39636057', 'Cartão de Crédito', NULL, 2);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (3, 'Inscrição', 188.30, '2024-02-25 09:43:14', '2024-02-27 04:05:14', 'PAY-CGHD-27028951', 'PIX', NULL, 3);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (4, 'Inscrição', 132.80, '2027-06-26 11:41:04', '2027-06-27 19:27:04', 'PAY-NSZP-02621745', 'Cartão de Crédito', NULL, 4);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (5, 'Inscrição', 83.00, '2027-06-14 22:34:08', '2027-06-15 23:58:08', 'PAY-NEPO-15865780', 'Boleto Bancário', NULL, 6);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (6, 'Inscrição', 264.00, '2024-01-21 14:37:47', '2024-01-22 19:01:47', 'PAY-STBC-43161172', 'Cartão de Crédito', NULL, 7);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (7, 'Inscrição', 167.00, '2024-03-01 14:17:02', '2024-03-02 05:11:02', 'PAY-HAKR-50455623', 'Cartão de Crédito', NULL, 8);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (8, 'Inscrição', 0.00, '2024-02-04 09:43:23', '2024-02-06 05:49:23', 'PAY-FLJO-22219693', 'Cartão de Crédito', NULL, 9);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (9, 'Inscrição', 116.90, '2023-11-13 09:54:52', '2023-11-15 07:13:52', 'PAY-KECW-74740748', 'PIX', NULL, 10);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (10, 'Inscrição', 132.00, '2024-01-04 08:50:21', '2024-01-04 17:30:21', 'PAY-EGPY-94647436', 'Cartão de Crédito', NULL, 11);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (11, 'Inscrição', 166.00, '2027-07-03 20:35:13', '2027-07-04 12:34:13', 'PAY-AKRX-95944064', 'PIX', NULL, 12);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (12, 'Inscrição', 173.00, '2024-01-04 18:55:01', '2024-01-05 19:27:01', 'PAY-OMNQ-09743953', 'Boleto Bancário', NULL, 14);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (13, 'Inscrição', 97.00, '2023-12-15 08:11:16', '2023-12-16 13:00:16', 'PAY-UIFS-21047095', 'Boleto Bancário', NULL, 15);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (14, 'Inscrição', 167.00, '2024-01-25 15:49:23', '2024-01-25 23:20:23', 'PAY-GRKQ-56232858', 'PIX', NULL, 16);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (15, 'Inscrição', 116.20, '2027-06-27 08:03:30', NULL, 'PEN-RURZ-74517123', 'Cartão de Crédito', NULL, 18);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (16, 'Inscrição', 128.80, '2023-12-29 09:57:05', '2023-12-29 20:09:05', 'PAY-DXRV-85160481', 'Boleto Bancário', NULL, 19);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (17, 'Inscrição', 0.00, '2024-03-06 17:35:45', '2024-03-08 10:26:45', 'PAY-NJUN-49651370', 'Cartão de Crédito', NULL, 20);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (18, 'Inscrição', 0.00, '2023-11-30 14:06:50', '2023-12-02 10:52:50', 'PAY-CTFH-31746120', 'PIX', NULL, 21);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (19, 'Inscrição', 269.00, '2024-02-05 14:28:56', '2024-02-06 13:41:56', 'PAY-ALVU-13826758', 'Cartão de Crédito', NULL, 22);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (20, 'Inscrição', 0.00, '2023-12-17 09:20:27', '2023-12-18 02:49:27', 'PAY-SXNC-26179640', 'Boleto Bancário', NULL, 23);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (21, 'Inscrição', 0.00, '2024-01-25 09:05:53', '2024-01-26 14:38:53', 'PAY-ZRMH-73515850', 'Cartão de Crédito', NULL, 24);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (22, 'Inscrição', 215.20, '2024-01-15 12:38:19', '2024-01-17 04:10:19', 'PAY-IYKN-71390053', 'Boleto Bancário', NULL, 27);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (23, 'Inscrição', 83.30, '2023-11-14 11:54:06', '2023-11-16 01:57:06', 'PAY-YMAR-18393352', 'Cartão de Crédito', NULL, 28);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (24, 'Inscrição', 119.00, '2023-11-07 21:35:49', NULL, 'PEN-AWYY-22842102', 'Boleto Bancário', NULL, 29);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (25, 'Inscrição', 184.80, '2024-01-04 17:59:42', NULL, 'PEN-VAHH-39502402', 'Boleto Bancário', NULL, 30);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (26, 'Inscrição', 83.50, '2023-12-14 22:21:22', '2023-12-15 08:12:22', 'PAY-GONC-17758917', 'Boleto Bancário', NULL, 31);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (27, 'Inscrição', 128.80, '2023-12-10 19:40:01', '2023-12-12 07:57:01', 'PAY-RGFT-84700766', 'PIX', NULL, 32);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (28, 'Inscrição', 172.00, '2023-11-22 10:23:19', '2023-11-24 01:12:19', 'PAY-RNOL-71159212', 'PIX', NULL, 33);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (29, 'Inscrição', 133.60, '2023-11-04 10:48:39', '2023-11-04 16:27:39', 'PAY-MBGY-85698478', 'PIX', NULL, 34);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (30, 'Inscrição', 0.00, '2024-02-20 17:28:26', '2024-02-22 04:31:26', 'PAY-DZAU-18367365', 'Cartão de Crédito', NULL, 35);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (31, 'Inscrição', 150.50, '2023-11-19 18:43:37', '2023-11-21 16:20:37', 'PAY-EFFF-15654527', 'Cartão de Crédito', NULL, 36);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (32, 'Inscrição', 116.90, '2024-02-26 08:00:13', '2024-02-26 22:30:13', 'PAY-JVQH-61528098', 'Cartão de Crédito', NULL, 37);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (33, 'Inscrição', 0.00, '2023-12-09 13:07:00', '2023-12-10 18:35:00', 'PAY-GKGN-65604945', 'Boleto Bancário', NULL, 38);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (34, 'Inscrição', 0.00, '2023-11-23 16:35:53', '2023-11-24 16:50:53', 'PAY-WRKO-27315851', 'Cartão de Crédito', NULL, 39);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (35, 'Inscrição', 107.50, '2023-12-07 14:45:40', '2023-12-07 22:41:40', 'PAY-BLRS-68998094', 'PIX', NULL, 41);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (36, 'Inscrição', 83.50, '2023-11-08 20:39:29', NULL, 'PEN-EJVO-45502296', 'PIX', NULL, 42);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (37, 'Inscrição', 150.50, '2023-11-07 11:27:37', '2023-11-07 16:54:37', 'PAY-KXTU-01836675', 'Boleto Bancário', NULL, 43);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (38, 'Inscrição', 155.20, '2023-12-17 11:21:49', '2023-12-18 22:16:49', 'PAY-DRFR-59910229', 'Boleto Bancário', NULL, 44);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (39, 'Inscrição', 167.00, '2023-11-14 22:49:22', '2023-11-16 18:57:22', 'PAY-WGHW-76797643', 'Cartão de Crédito', NULL, 45);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (40, 'Inscrição', 0.00, '2023-11-02 12:12:11', '2023-11-04 09:01:11', 'PAY-OZMD-61497840', 'Boleto Bancário', NULL, 46);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (41, 'Inscrição', 86.50, '2024-02-22 15:48:36', '2024-02-23 22:31:36', 'PAY-HAFV-03432445', 'PIX', NULL, 47);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (42, 'Inscrição', 0.00, '2024-02-19 21:40:20', '2024-02-20 02:24:20', 'PAY-QZWE-62268388', 'PIX', NULL, 48);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (43, 'Inscrição', 0.00, '2024-01-24 17:03:22', '2024-01-25 14:19:22', 'PAY-BKZT-60607159', 'PIX', NULL, 49);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (44, 'Inscrição', 0.00, '2023-11-24 21:18:04', '2023-11-25 03:32:04', 'PAY-DSXF-64160529', 'PIX', NULL, 50);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (45, 'Inscrição', 0.00, '2027-08-04 17:35:50', '2027-08-04 20:28:50', 'PAY-ZTVV-61369681', 'Boleto Bancário', NULL, 51);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (46, 'Inscrição', 0.00, '2024-02-02 13:38:30', '2024-02-02 17:56:30', 'PAY-MXWW-35218188', 'Cartão de Crédito', NULL, 52);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (47, 'Inscrição', 167.00, '2023-12-22 19:05:32', '2023-12-22 21:50:32', 'PAY-JWWP-23124329', 'Cartão de Crédito', NULL, 53);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (48, 'Inscrição', 147.20, '2023-12-29 16:33:39', '2023-12-30 18:05:39', 'PAY-PONU-12779979', 'Boleto Bancário', NULL, 54);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (49, 'Inscrição', 0.00, '2023-10-27 18:38:03', '2023-10-29 14:54:03', 'PAY-LDWG-52717744', 'Cartão de Crédito', NULL, 55);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (50, 'Inscrição', 133.60, '2024-02-15 18:24:18', '2024-02-17 15:18:18', 'PAY-EPFN-14770054', 'PIX', NULL, 56);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (51, 'Inscrição', 0.00, '2027-09-12 09:37:42', '2027-09-13 09:34:42', 'PAY-ZKPM-98679807', 'Boleto Bancário', NULL, 57);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (52, 'Inscrição', 132.00, '2024-01-16 10:38:45', NULL, 'PEN-ZVTF-59782071', 'Boleto Bancário', NULL, 58);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (53, 'Inscrição', 128.80, '2023-12-24 08:23:19', '2023-12-24 23:05:19', 'PAY-NKXX-82037788', 'PIX', NULL, 60);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (54, 'Inscrição', 170.80, '2027-08-28 19:56:33', '2027-08-29 19:00:33', 'PAY-VGJR-46659051', 'Cartão de Crédito', NULL, 62);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (55, 'Inscrição', 0.00, '2024-01-23 14:09:10', '2024-01-25 13:31:10', 'PAY-QJWT-64492519', 'Boleto Bancário', NULL, 63);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (56, 'Inscrição', 0.00, '2027-07-16 19:28:02', '2027-07-18 17:43:02', 'PAY-IQSV-62914865', 'Cartão de Crédito', NULL, 64);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (57, 'Inscrição', 138.40, '2024-01-26 20:47:50', '2024-01-28 09:19:50', 'PAY-LNVX-81685054', 'PIX', NULL, 65);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (58, 'Inscrição', 0.00, '2024-02-19 22:53:12', '2024-02-21 13:54:12', 'PAY-GXIV-73322141', 'Cartão de Crédito', NULL, 66);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (59, 'Inscrição', 0.00, '2024-02-23 16:26:10', NULL, 'PEN-KLSX-80592962', 'Boleto Bancário', NULL, 67);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (60, 'Inscrição', 0.00, '2027-06-15 08:41:30', NULL, 'PEN-NSWV-92706537', 'Boleto Bancário', NULL, 68);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (61, 'Inscrição', 0.00, '2023-11-19 12:05:48', '2023-11-20 18:50:48', 'PAY-RKCD-73834735', 'Cartão de Crédito', NULL, 69);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (62, 'Inscrição', 181.30, '2024-02-11 08:25:32', '2024-02-12 10:51:32', 'PAY-IQDP-46886239', 'Boleto Bancário', NULL, 71);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (63, 'Inscrição', 150.50, '2023-11-21 22:06:53', '2023-11-22 21:04:53', 'PAY-WKRC-75818141', 'Cartão de Crédito', NULL, 72);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (64, 'Inscrição', 0.00, '2023-12-08 22:53:30', '2023-12-09 08:26:30', 'PAY-ADZG-82613750', 'Boleto Bancário', NULL, 73);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (65, 'Inscrição', 147.20, '2023-12-01 22:05:01', '2023-12-02 08:22:01', 'PAY-GTPV-53615305', 'Boleto Bancário', NULL, 74);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (66, 'Inscrição', 264.00, '2024-01-17 09:49:18', '2024-01-17 18:13:18', 'PAY-NAFB-22047277', 'Boleto Bancário', NULL, 75);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (67, 'Inscrição', 0.00, '2027-08-15 16:36:15', '2027-08-16 12:34:15', 'PAY-XSPT-43289861', 'Cartão de Crédito', NULL, 77);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (68, 'Inscrição', 83.50, '2023-11-26 17:26:11', '2023-11-26 23:21:11', 'PAY-FMIB-10369711', 'Boleto Bancário', NULL, 78);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (69, 'Inscrição', 150.50, '2023-12-04 16:32:50', NULL, 'PEN-WPKA-89324609', 'Boleto Bancário', NULL, 79);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (70, 'Inscrição', 184.00, '2023-12-05 13:15:46', '2023-12-05 20:24:46', 'PAY-YGJB-21851888', 'Cartão de Crédito', NULL, 81);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (71, 'Inscrição', 0.00, '2023-12-03 13:34:21', NULL, 'PEN-YEWP-67065405', 'Cartão de Crédito', NULL, 82);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (72, 'Inscrição', 188.30, '2024-03-08 19:30:40', '2024-03-09 04:47:40', 'PAY-PLXR-19520585', 'PIX', NULL, 83);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (73, 'Inscrição', 211.20, '2024-01-18 08:18:12', '2024-01-18 22:00:12', 'PAY-MCYM-77221704', 'Cartão de Crédito', NULL, 84);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (74, 'Inscrição', 116.90, '2023-12-14 16:25:52', '2023-12-15 09:47:52', 'PAY-CWPM-05486874', 'Cartão de Crédito', NULL, 85);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (75, 'Inscrição', 0.00, '2024-01-13 13:55:49', '2024-01-15 10:45:49', 'PAY-ZVCY-45054156', 'Boleto Bancário', NULL, 86);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (76, 'Inscrição', 119.00, '2023-10-31 14:56:25', '2023-11-01 17:24:25', 'PAY-UBFB-52775841', 'PIX', NULL, 87);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (77, 'Inscrição', 147.20, '2023-12-18 20:05:46', '2023-12-20 01:33:46', 'PAY-QSTC-92845115', 'Cartão de Crédito', NULL, 88);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (78, 'Inscrição', 135.80, '2023-12-11 13:06:05', '2023-12-12 09:21:05', 'PAY-NBRO-96275705', 'Boleto Bancário', NULL, 89);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (79, 'Inscrição', 0.00, '2024-02-12 10:44:28', '2024-02-12 13:42:28', 'PAY-MRYC-01658202', 'Cartão de Crédito', NULL, 90);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (80, 'Inscrição', 172.00, '2023-12-18 18:10:01', '2023-12-20 11:43:01', 'PAY-CMJR-02135569', 'Boleto Bancário', NULL, 92);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (81, 'Inscrição', 133.60, '2023-12-28 13:24:36', '2023-12-28 23:57:36', 'PAY-XZUP-75571928', 'Boleto Bancário', NULL, 93);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (82, 'Inscrição', 0.00, '2024-02-05 15:48:04', '2024-02-07 04:01:04', 'PAY-JHQX-43102786', 'Boleto Bancário', NULL, 94);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (83, 'Inscrição', 172.00, '2023-11-18 11:07:01', '2023-11-19 21:16:01', 'PAY-IECL-47394731', 'PIX', NULL, 95);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (84, 'Inscrição', 173.00, '2024-02-16 11:39:18', '2024-02-17 21:15:18', 'PAY-TKTT-71551884', 'Boleto Bancário', NULL, 96);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (85, 'Inscrição', 167.00, '2023-10-14 15:11:57', '2023-10-14 21:15:57', 'PAY-YFBX-25831323', 'Cartão de Crédito', NULL, 97);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (86, 'Inscrição', 233.80, '2024-02-16 18:22:45', '2024-02-18 07:27:45', 'PAY-ETZT-89578291', 'Cartão de Crédito', NULL, 98);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (87, 'Inscrição', 194.00, '2023-11-24 19:45:59', '2023-11-25 07:43:59', 'PAY-PECD-78669125', 'Boleto Bancário', NULL, 99);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (88, 'Inscrição', 150.50, '2023-11-08 11:50:08', '2023-11-09 21:38:08', 'PAY-GDHH-85289226', 'Boleto Bancário', NULL, 100);
+
+-- Reembolsos vinculados a pagamentos originais cancelados
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (89, 'Reembolso', 93.52, '2024-03-31 23:36:23', '2024-04-02 23:36:23', 'REF-SFQM-24225358', 'PIX', 1, 1);
+INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES (90, 'Reembolso', 125.25, '2023-12-31 21:50:32', '2024-01-01 23:50:32', 'REF-PKLL-84249818', 'PIX', 47, 53);
+
+-- ============================================================
+-- 10. Ajuste das Sequences de Identity (PostgreSQL)
+-- ============================================================
+
+SELECT setval(pg_get_serial_sequence('pessoa', 'id'), coalesce(max(id), 1)) FROM pessoa;
+SELECT setval(pg_get_serial_sequence('evento', 'id'), coalesce(max(id), 1)) FROM evento;
+SELECT setval(pg_get_serial_sequence('categoria_inscricao', 'id'), coalesce(max(id), 1)) FROM categoria_inscricao;
+SELECT setval(pg_get_serial_sequence('atividade', 'id'), coalesce(max(id), 1)) FROM atividade;
+SELECT setval(pg_get_serial_sequence('inscricao', 'id'), coalesce(max(id), 1)) FROM inscricao;
+SELECT setval(pg_get_serial_sequence('item_financeiro', 'id'), coalesce(max(id), 1)) FROM item_financeiro;
+SELECT setval(pg_get_serial_sequence('pagamento', 'id'), coalesce(max(id), 1)) FROM pagamento;
+
+COMMIT;
