@@ -837,7 +837,10 @@ def gerar_sql(
     # 6. ATIVIDADE
     # ==========================================================
     add_section_header("6. TABELA Atividade")
-    tipos_atividades = ["Palestra", "Minicurso", "Mesa Redonda", "Sessão Técnica", "Painel"]
+    tipos_atividades = [
+        "Palestra", "Minicurso", "Mesa Redonda", "Sessão Técnica", "Painel",
+        "Workshop Temático", "Tutorial Prático", "Hackathon / Maratona"
+    ]
     temas_atividades = [
         "Avanços em Inteligência Artificial Generativa",
         "Modelagem e Otimização em Banco de Dados Relacionais e NoSQL",
@@ -855,15 +858,15 @@ def gerar_sql(
         # Encontra categorias pertencentes a este evento
         cats_evento = [c for c in categorias if c["id_evento"] == ev["id"]]
 
-        # 3 a 5 atividades por evento
-        qtd_atividades = random.randint(3, 5)
+        # 4 a 6 atividades por evento
+        qtd_atividades = random.randint(4, 6)
         for _ in range(qtd_atividades):
             tipo = random.choice(tipos_atividades)
             tema = random.choice(temas_atividades)
             nome_atv = f"{tipo}: {tema}"
-            # Minicursos costumam ter taxa adicional, palestras geralmente não
-            if tipo == "Minicurso" and random.random() < 0.7:
-                preco_atv = Decimal(f"{random.randint(30, 80)}.00")
+            # Minicursos, Workshops e Tutoriais costumam ter taxa adicional
+            if tipo in ["Minicurso", "Workshop Temático", "Tutorial Prático", "Hackathon / Maratona"] and random.random() < 0.75:
+                preco_atv = Decimal(f"{random.randint(35, 95)}.00")
             else:
                 preco_atv = Decimal("0.00")
 
@@ -878,6 +881,7 @@ def gerar_sql(
 
             atividades.append({
                 "id": atv_id_counter,
+                "id_evento": ev["id"],
                 "preco": preco_atv,
                 "dt_inicio": dt_inicio_atv,
                 "dt_fim": dt_fim_atv,
@@ -943,6 +947,7 @@ def gerar_sql(
         inscricao_dict = {
             "id": inscricao_id,
             "dt_confirmacao": dt_confirmacao,
+            "is_confirmada": is_confirmada,
             "dt_inscricao": dt_inscricao,
             "id_categoria": categoria["id"],
             "id_pessoa": pessoa["id"],
@@ -968,50 +973,192 @@ def gerar_sql(
     # ==========================================================
     add_section_header("8. TABELA Item_financeiro")
     itens_financeiros = []
+    item_id_counter = 1
 
-    for item_id, insc in enumerate(inscricoes, start=1):
-        if insc["dt_confirmacao"] is not None:
-            # Confirmada: houve pagamento
-            dt_pagamento = insc["dt_confirmacao"]
-            # Pequena taxa de cancelamento após pagamento (~5%) para testar estornos/reembolsos
-            if random.random() < 0.05:
-                dt_cancelamento = dt_pagamento + datetime.timedelta(days=random.randint(1, 10))
+    for insc in inscricoes:
+        ev = next(e for e in eventos if e["id"] == insc["id_evento"])
+        itens_desta_inscricao = []
+
+        # ------------------------------------------------------
+        # 8.1. Item Obrigatório Principal: Inscrição no Evento
+        # ------------------------------------------------------
+        valor_inscricao = Decimal(f"{(insc['preco_base'] * insc['fator_mult']):.2f}")
+        tipo_principal = "Inscrição"
+
+        formatos_desc_insc = [
+            f"Inscrição {insc['evento_sigla']} {insc['evento_ano']} - {insc['categoria_nome']} ({insc['lote_nome']})",
+            f"Taxa de Inscrição {insc['evento_sigla']} {insc['evento_ano']} ({insc['lote_nome']}) - Categoria {insc['categoria_nome']}",
+            f"Credenciamento {insc['evento_sigla']} {insc['evento_ano']} - {insc['categoria_nome']} ({insc['lote_nome']})",
+            f"Passaporte de Acesso Oficial {insc['evento_sigla']} {insc['evento_ano']} - {insc['categoria_nome']}",
+        ]
+        desc_principal = random.choice(formatos_desc_insc)
+
+        dt_compra_principal = insc["dt_inscricao"]
+        if insc["is_confirmada"]:
+            dt_pag_principal = insc["dt_confirmacao"]
+            # Pequena taxa de cancelamento após pagamento (~4%) para teste de estornos/reembolsos
+            if random.random() < 0.04 and valor_inscricao > Decimal("0.00"):
+                dt_canc_principal = dt_pag_principal + datetime.timedelta(days=random.randint(1, 10))
             else:
-                dt_cancelamento = None
+                dt_canc_principal = None
         else:
-            # Não confirmada: pendente ou cancelada antes de pagar
-            dt_pagamento = None
-            if random.random() < 0.5:
-                # Cancelada sem pagamento
-                dt_cancelamento = insc["dt_inscricao"] + datetime.timedelta(days=random.randint(3, 7))
+            dt_pag_principal = None
+            if random.random() < 0.50:
+                # Cancelada antes do pagamento
+                dt_canc_principal = dt_compra_principal + datetime.timedelta(days=random.randint(2, 6))
             else:
-                # Permanece pendente
-                dt_cancelamento = None
+                # Permanece pendente de pagamento
+                dt_canc_principal = None
 
-        valor_calculado = Decimal(f"{(insc['preco_base'] * insc['fator_mult']):.2f}")
-        tipo_item = "Inscrição"
-        descricao_item = f"Inscrição {insc['evento_sigla']} {insc['evento_ano']} - {insc['categoria_nome']} ({insc['lote_nome']})"
-
-        item_dict = {
-            "id": item_id,
-            "dt_pagamento": dt_pagamento,
-            "dt_cancelamento": dt_cancelamento,
-            "id_inscricao": insc["id"],
-            "descricao": descricao_item,
-            "valor": valor_calculado,
-            "tipo": tipo_item,
+        itens_desta_inscricao.append({
+            "tipo": tipo_principal,
+            "descricao": desc_principal,
+            "valor": valor_inscricao,
+            "dt_compra": dt_compra_principal,
+            "dt_pagamento": dt_pag_principal,
+            "dt_cancelamento": dt_canc_principal,
             "inscricao": insc,
-        }
-        itens_financeiros.append(item_dict)
+        })
 
-        sql_statements.append(
-            f"INSERT INTO Item_financeiro (id, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES "
-            f"({sql_val(item_id)}, {sql_val(dt_cancelamento)}, {sql_val(insc['id'])}, "
-            f"{sql_val(descricao_item)}, {sql_val(valor_calculado)}, {sql_val(tipo_item)});"
-        )
+        # ------------------------------------------------------
+        # 8.2. Itens Adicionais Opcionais na mesma Inscrição
+        # ------------------------------------------------------
+        # 25% têm 0 extras, 45% têm 1 extra, 23% têm 2 extras, 7% têm 3 extras
+        qtd_extras = random.choices([0, 1, 2, 3], weights=[0.25, 0.45, 0.23, 0.07])[0]
+
+        atividades_candidatas = [
+            a for a in atividades
+            if a.get("id_evento") == ev["id"] and a["preco"] > Decimal("0.00")
+        ]
+        random.shuffle(atividades_candidatas)
+        atvs_usadas_inscricao = set()
+
+        tipos_extras_disponiveis = [
+            "atividade", "atividade", "combo_sbtc", "social", "material", "certificado", "publicacao"
+        ]
+
+        for _ in range(qtd_extras):
+            tipo_escolhido = random.choice(tipos_extras_disponiveis)
+            item_extra_info = None
+
+            if tipo_escolhido == "atividade":
+                atv_disp = next((a for a in atividades_candidatas if a["id"] not in atvs_usadas_inscricao), None)
+                if atv_disp:
+                    atvs_usadas_inscricao.add(atv_disp["id"])
+                    formatos_desc_atv = [
+                        f"Inscrição em {atv_disp['tipo']}: {atv_disp['nome']} ({insc['evento_sigla']})",
+                        f"Taxa de Participação - {atv_disp['nome']}",
+                        f"Módulo Prático: {atv_disp['nome']} ({insc['evento_sigla']} {insc['evento_ano']})",
+                    ]
+                    item_extra_info = {
+                        "tipo": "Atividade",
+                        "descricao": random.choice(formatos_desc_atv),
+                        "valor": atv_disp["preco"],
+                    }
+
+            elif tipo_escolhido == "combo_sbtc":
+                is_estudante = any(t in insc["categoria_nome"].lower() for t in ["estudante", "aluno", "iniciação", "médio"])
+                if is_estudante:
+                    val_sbtc = Decimal(f"{random.choice([50, 60, 70, 75])}.00")
+                    desc_sbtc = f"Combo Anuidade Estudantil SBTC ({insc['evento_ano']}) - Filiação Anual"
+                else:
+                    val_sbtc = Decimal(f"{random.choice([120, 140, 160, 180])}.00")
+                    desc_sbtc = f"Combo Filiação / Renovação SBTC ({insc['evento_ano']}) - Categoria Profissional"
+                item_extra_info = {
+                    "tipo": "Associação SBTC",
+                    "descricao": desc_sbtc,
+                    "valor": val_sbtc,
+                }
+
+            elif tipo_escolhido == "social":
+                val_social = Decimal(f"{random.choice([80, 95, 110, 130, 150])}.00")
+                formatos_social = [
+                    f"Convite para o Jantar de Confraternização Oficial do {insc['evento_sigla']} {insc['evento_ano']}",
+                    f"Banquete de Encerramento e Cerimônia de Premiação ({insc['evento_sigla']} {insc['evento_ano']})",
+                    f"Noite Cultural e Coquetel de Abertura ({insc['evento_sigla']} {insc['evento_ano']})",
+                ]
+                item_extra_info = {
+                    "tipo": "Social",
+                    "descricao": random.choice(formatos_social),
+                    "valor": val_social,
+                }
+
+            elif tipo_escolhido == "material":
+                val_mat = Decimal(f"{random.choice([35, 45, 55, 65])}.00")
+                formatos_mat = [
+                    f"Kit Oficial do Congressista {insc['evento_sigla']} (Mochila + Camiseta + Brindes)",
+                    f"Ecobag + Caderno Institucional + Caneta Personalizada ({insc['evento_sigla']})",
+                    f"Camiseta Comemorativa da Edição {insc['evento_ano']} ({insc['evento_sigla']})",
+                ]
+                item_extra_info = {
+                    "tipo": "Material",
+                    "descricao": random.choice(formatos_mat),
+                    "valor": val_mat,
+                }
+
+            elif tipo_escolhido == "certificado":
+                val_cert = Decimal(f"{random.choice([25, 30, 40])}.00")
+                item_extra_info = {
+                    "tipo": "Certificado Impresso",
+                    "descricao": f"Emissão e Envio Postal de Certificado Impresso Oficial ({insc['evento_sigla']} {insc['evento_ano']})",
+                    "valor": val_cert,
+                }
+
+            elif tipo_escolhido == "publicacao":
+                val_pub = Decimal(f"{random.choice([120, 150, 180, 220])}.00")
+                item_extra_info = {
+                    "tipo": "Taxa de Publicação",
+                    "descricao": f"Taxa de Publicação de Artigo Técnico Adicional nos Anais do {insc['evento_sigla']} {insc['evento_ano']}",
+                    "valor": val_pub,
+                }
+
+            if item_extra_info:
+                # 80% compram no checkout da inscrição; 20% fazem compra complementar posterior
+                if random.random() < 0.80:
+                    dt_compra_extra = insc["dt_inscricao"]
+                else:
+                    dias_depois = random.randint(1, 10)
+                    dt_compra_extra = insc["dt_inscricao"] + datetime.timedelta(days=dias_depois)
+
+                if insc["is_confirmada"]:
+                    # Inscrição confirmada: ~93% dos itens extras também são pagos
+                    if random.random() < 0.93:
+                        dt_pag_extra = dt_compra_extra + datetime.timedelta(minutes=random.randint(5, 1440))
+                        # ~4% de chance de desistência/cancelamento avulso apenas deste item extra
+                        if random.random() < 0.04 and item_extra_info["valor"] > Decimal("0.00"):
+                            dt_canc_extra = dt_pag_extra + datetime.timedelta(days=random.randint(1, 8))
+                        else:
+                            dt_canc_extra = None
+                    else:
+                        dt_pag_extra = None
+                        dt_canc_extra = None
+                else:
+                    dt_pag_extra = None
+                    dt_canc_extra = dt_canc_principal
+
+                itens_desta_inscricao.append({
+                    "tipo": item_extra_info["tipo"],
+                    "descricao": item_extra_info["descricao"],
+                    "valor": item_extra_info["valor"],
+                    "dt_compra": dt_compra_extra,
+                    "dt_pagamento": dt_pag_extra,
+                    "dt_cancelamento": dt_canc_extra,
+                    "inscricao": insc,
+                })
+
+        # Insere todos os itens da inscrição
+        for it in itens_desta_inscricao:
+            it["id"] = item_id_counter
+            itens_financeiros.append(it)
+            sql_statements.append(
+                f"INSERT INTO Item_financeiro (id, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES "
+                f"({sql_val(item_id_counter)}, {sql_val(it['dt_cancelamento'])}, {sql_val(insc['id'])}, "
+                f"{sql_val(it['descricao'])}, {sql_val(it['valor'])}, {sql_val(it['tipo'])});"
+            )
+            item_id_counter += 1
 
     # ==========================================================
-    # 9. PAGAMENTO
+    # 9. TABELA Pagamento
     # ==========================================================
     add_section_header("9. TABELA Pagamento")
     modalidades = ["PIX", "Cartão de Crédito", "Boleto Bancário"]
@@ -1030,21 +1177,25 @@ def gerar_sql(
 
     for it in itens_financeiros:
         insc = it["inscricao"]
-        valor_calculado = Decimal(f"{(insc['preco_base'] * insc['fator_mult']):.2f}")
+        valor_item = it["valor"]
+        dt_criacao_pag = it.get("dt_compra", insc["dt_inscricao"])
 
-        # Se houve pagamento ou tentativa de pagamento
+        # 9.1. Item pago com confirmação
         if it["dt_pagamento"] is not None:
-            # Pagamento confirmado
-            dt_criacao = insc["dt_inscricao"]
-            dt_confirmacao = it["dt_pagamento"]
-            modalidade = random.choice(modalidades)
-            cod_tx = gerar_cod_transacao("PAY")
+            if valor_item > Decimal("0.00"):
+                modalidade = random.choice(modalidades)
+                cod_tx = gerar_cod_transacao("PAY")
+            else:
+                modalidade = "Isenção / Cortesia"
+                cod_tx = gerar_cod_transacao("GRT")
+
+            dt_conf = it["dt_pagamento"]
 
             pag_obj = {
                 "id": pagamento_id_counter,
-                "valor": valor_calculado,
-                "dt_criacao": dt_criacao,
-                "dt_confirmacao": dt_confirmacao,
+                "valor": valor_item,
+                "dt_criacao": dt_criacao_pag,
+                "dt_confirmacao": dt_conf,
                 "cod_transacao": cod_tx,
                 "modalidade": modalidade,
                 "id_reembolsa": None,
@@ -1054,28 +1205,26 @@ def gerar_sql(
 
             sql_statements.append(
                 f"INSERT INTO Pagamento (id, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES "
-                f"({sql_val(pagamento_id_counter)}, {sql_val(valor_calculado)}, "
-                f"{sql_val(dt_criacao)}, {sql_val(dt_confirmacao)}, {sql_val(cod_tx)}, "
+                f"({sql_val(pagamento_id_counter)}, {sql_val(valor_item)}, "
+                f"{sql_val(dt_criacao_pag)}, {sql_val(dt_conf)}, {sql_val(cod_tx)}, "
                 f"{sql_val(modalidade)}, NULL, {sql_val(it['id'])});"
             )
 
-            # Se o item foi cancelado após o pagamento, gera estorno/reembolso
-            if it["dt_cancelamento"] is not None and valor_calculado > 0:
-                pagamentos_originais_para_reembolso.append((pagamento_id_counter, it, valor_calculado, insc["id_evento"]))
+            # Se o item foi cancelado após o pagamento e tinha valor monetário, gera estorno/reembolso
+            if it["dt_cancelamento"] is not None and valor_item > Decimal("0.00"):
+                pagamentos_originais_para_reembolso.append((pagamento_id_counter, it, valor_item, insc["id_evento"]))
 
             pagamento_id_counter += 1
 
+        # 9.2. Item pendente de confirmação (aguardando compensação de boleto/PIX)
         elif it["dt_cancelamento"] is None:
-            # Pagamento ainda pendente de confirmação
-            dt_criacao = insc["dt_inscricao"]
-            dt_confirmacao = None
             modalidade = random.choice(modalidades)
             cod_tx = gerar_cod_transacao("PEN")
 
             pag_obj = {
                 "id": pagamento_id_counter,
-                "valor": valor_calculado,
-                "dt_criacao": dt_criacao,
+                "valor": valor_item,
+                "dt_criacao": dt_criacao_pag,
                 "dt_confirmacao": None,
                 "cod_transacao": cod_tx,
                 "modalidade": modalidade,
@@ -1086,13 +1235,38 @@ def gerar_sql(
 
             sql_statements.append(
                 f"INSERT INTO Pagamento (id, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES "
-                f"({sql_val(pagamento_id_counter)}, {sql_val(valor_calculado)}, "
-                f"{sql_val(dt_criacao)}, NULL, {sql_val(cod_tx)}, "
+                f"({sql_val(pagamento_id_counter)}, {sql_val(valor_item)}, "
+                f"{sql_val(dt_criacao_pag)}, NULL, {sql_val(cod_tx)}, "
                 f"{sql_val(modalidade)}, NULL, {sql_val(it['id'])});"
             )
             pagamento_id_counter += 1
 
-    # Criação dos reembolsos (Pagamentos com id_reembolsa apontando para o id do pagamento original)
+        # 9.3. Item cancelado antes do pagamento (em ~35% dos casos houve tentativa que expirou)
+        elif it["dt_cancelamento"] is not None and random.random() < 0.35 and valor_item > Decimal("0.00"):
+            modalidade = random.choice(modalidades)
+            cod_tx = gerar_cod_transacao("EXP")
+
+            pag_obj = {
+                "id": pagamento_id_counter,
+                "valor": valor_item,
+                "dt_criacao": dt_criacao_pag,
+                "dt_confirmacao": None,
+                "cod_transacao": cod_tx,
+                "modalidade": modalidade,
+                "id_reembolsa": None,
+                "id_item_financeiro": it["id"],
+            }
+            pagamentos.append(pag_obj)
+
+            sql_statements.append(
+                f"INSERT INTO Pagamento (id, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES "
+                f"({sql_val(pagamento_id_counter)}, {sql_val(valor_item)}, "
+                f"{sql_val(dt_criacao_pag)}, NULL, {sql_val(cod_tx)}, "
+                f"{sql_val(modalidade)}, NULL, {sql_val(it['id'])});"
+            )
+            pagamento_id_counter += 1
+
+    # 9.4. Criação dos reembolsos vinculados aos pagamentos originais cancelados
     if pagamentos_originais_para_reembolso:
         sql_statements.append("\n-- Reembolsos vinculados a pagamentos originais cancelados")
         for id_orig, it, valor_orig, id_ev in pagamentos_originais_para_reembolso:
@@ -1109,10 +1283,8 @@ def gerar_sql(
 
             if pct_aplicada is None:
                 if not regras_ev:
-                    # Evento não prevê reembolso formal, mas estorno parcial administrativo pode ocorrer (~40%)
                     pct_aplicada = Decimal("0.4000000")
                 else:
-                    # Cancelamento fora do prazo das regras (retenção administrativa com estorno residual)
                     pct_aplicada = Decimal("0.2000000")
 
             valor_reembolso = Decimal(f"{(valor_orig * pct_aplicada):.2f}")
@@ -1172,9 +1344,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Gera dados sintéticos com Faker e queries de INSERT INTO para o banco de dados."
     )
-    parser.add_argument("--pessoas", type=int, default=60, help="Quantidade de pessoas a gerar (padrão: 60)")
-    parser.add_argument("--eventos", type=int, default=6, help="Quantidade de eventos a gerar (padrão: 6)")
-    parser.add_argument("--inscricoes", type=int, default=100, help="Quantidade de inscrições a gerar (padrão: 100)")
+    parser.add_argument("--pessoas", type=int, default=5000, help="Quantidade de pessoas a gerar (padrão: 60)")
+    parser.add_argument("--eventos", type=int, default=5000, help="Quantidade de eventos a gerar (padrão: 6)")
+    parser.add_argument("--inscricoes", type=int, default=20000, help="Quantidade de inscrições a gerar (padrão: 100)")
     parser.add_argument("--output", type=str, default="inserts_banco_de_dados.sql", help="Arquivo SQL de saída")
     parser.add_argument("--seed", type=int, default=42, help="Seed aleatória para reproducibilidade")
 
