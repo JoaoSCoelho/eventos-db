@@ -1005,8 +1005,8 @@ def gerar_sql(
         itens_financeiros.append(item_dict)
 
         sql_statements.append(
-            f"INSERT INTO Item_financeiro (id, dt_pagamento, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES "
-            f"({sql_val(item_id)}, {sql_val(dt_pagamento)}, {sql_val(dt_cancelamento)}, {sql_val(insc['id'])}, "
+            f"INSERT INTO Item_financeiro (id, dt_cancelamento, id_inscricao, descricao, valor, tipo) VALUES "
+            f"({sql_val(item_id)}, {sql_val(dt_cancelamento)}, {sql_val(insc['id'])}, "
             f"{sql_val(descricao_item)}, {sql_val(valor_calculado)}, {sql_val(tipo_item)});"
         )
 
