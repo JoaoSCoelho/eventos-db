@@ -873,8 +873,8 @@ def gerar_sql(
             dt_inicio_atv = datetime.datetime.combine(dt_atv_dia, datetime.time(hora_inicio, 0))
             dt_fim_atv = dt_inicio_atv + datetime.timedelta(hours=random.choice([1, 2, 3]))
 
-            # Pode ser restrito a uma categoria ou livre (NULL)
-            id_cat = random.choice(cats_evento)["id"] if random.random() < 0.3 else None
+            # Vincula obrigatoriamente a uma categoria de inscrição do mesmo evento (NOT NULL)
+            id_cat = random.choice(cats_evento)["id"]
 
             atividades.append({
                 "id": atv_id_counter,

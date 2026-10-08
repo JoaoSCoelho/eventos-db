@@ -47,7 +47,7 @@ CREATE TABLE Evento
  pais CHAR(3) NOT NULL,  
  edicao VARCHAR NOT NULL,  
  tipo VARCHAR NOT NULL,  
- id_agregado_por INT
+ id_agregado_por INT 
 ); 
 
 CREATE TABLE Categoria_inscricao 
@@ -78,7 +78,7 @@ CREATE TABLE Atividade
  dt_fim TIMESTAMP NOT NULL,  
  nome VARCHAR NOT NULL,  
  tipo VARCHAR NOT NULL,  
- id_categoria_inscricao INT
+ id_categoria_inscricao INT NOT NULL
 ); 
 
 CREATE TABLE Pagamento 
