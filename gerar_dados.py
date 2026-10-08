@@ -27,8 +27,10 @@ def sql_val(val) -> str:
         return "NULL"
     if isinstance(val, bool):
         return "TRUE" if val else "FALSE"
-    if isinstance(val, (int, Decimal)):
+    if isinstance(val, int):
         return str(val)
+    if isinstance(val, Decimal):
+        return f"{val:f}"
     if isinstance(val, float):
         return f"{val:.2f}"
     if isinstance(val, datetime.datetime):
@@ -702,33 +704,132 @@ def gerar_sql(
         ev["regras_reembolso"] = regras_evento
 
     # ==========================================================
-    # 5. CATEGORIA_INSCRICAO
+    # 5. TABELA Categoria_inscricao
     # ==========================================================
     add_section_header("5. TABELA Categoria_inscricao")
-    cat_templates = [
-        {"nome": "Estudante de Graduação", "desc": "Comprovante de matrícula obrigatório", "fator": Decimal("0.5000000")},
-        {"nome": "Estudante de Pós-Graduação", "desc": "Comprovante de pós-graduação obrigatório", "fator": Decimal("0.7000000")},
-        {"nome": "Profissional Associado SBTC", "desc": "Desconto exclusivo para membros ativos da SBTC", "fator": Decimal("0.8000000")},
-        {"nome": "Profissional Não Associado", "desc": "Inscrição padrão da categoria profissional", "fator": Decimal("1.0000000")},
-        {"nome": "Palestrante / Autor Convidado", "desc": "Inscrição isenta para palestrantes convidados", "fator": Decimal("0.0000000")},
+
+    # Pools de modelos de categorias por perfil de público
+    pool_profissionais_geral = [
+        {"nome": "Profissional Não Associado", "desc": "Inscrição padrão para profissionais sem vínculo associativo", "tipo": "base"},
+        {"nome": "Participante Geral", "desc": "Inscrição individual para o público geral da área de tecnologia", "tipo": "base"},
+        {"nome": "Profissional da Indústria", "desc": "Tarifa para profissionais atuantes no setor produtivo de TI", "tipo": "base"},
+        {"nome": "Profissional Autônomo / Consultor", "desc": "Tarifa padrão para consultores e profissionais liberais", "tipo": "base"},
+    ]
+
+    pool_associados = [
+        {"nome": "Profissional Associado SBTC", "desc": "Desconto exclusivo para membros com anuidade ativa da SBTC", "min_f": 0.70, "max_f": 0.85},
+        {"nome": "Membro Efetivo SBTC", "desc": "Tarifa especial para membros plenos da sociedade com anuidade em dia", "min_f": 0.68, "max_f": 0.82},
+        {"nome": "Profissional Filiado (Sociedades Parceiras)", "desc": "Desconto por reciprocidade para sociedades científicas parceiras", "min_f": 0.75, "max_f": 0.88},
+    ]
+
+    pool_graduacao = [
+        {"nome": "Estudante de Graduação", "desc": "Comprovante de matrícula em curso de graduação obrigatório", "min_f": 0.40, "max_f": 0.55},
+        {"nome": "Estudante de Graduação Associado SBTC", "desc": "Desconto estendido para estudantes de graduação membros da SBTC", "min_f": 0.30, "max_f": 0.45},
+        {"nome": "Estudante de Graduação Não Associado", "desc": "Tarifa universitária mediante comprovação de matrícula ativa", "min_f": 0.45, "max_f": 0.60},
+        {"nome": "Aluno de Iniciação Científica", "desc": "Estudante bolsista ou voluntário em projeto de IC cadastrado", "min_f": 0.35, "max_f": 0.50},
+        {"nome": "Estudante Técnico / Ensino Médio", "desc": "Incentivo a jovens talentos do ensino técnico e médio", "min_f": 0.20, "max_f": 0.35},
+    ]
+
+    pool_pos_graduacao = [
+        {"nome": "Estudante de Pós-Graduação", "desc": "Comprovante de matrícula regular em mestrado ou doutorado obrigatório", "min_f": 0.60, "max_f": 0.75},
+        {"nome": "Estudante de Pós-Graduação Associado SBTC", "desc": "Mestrandos e doutorandos com anuidade ativa na SBTC", "min_f": 0.50, "max_f": 0.68},
+        {"nome": "Estudante de Pós-Graduação Não Associado", "desc": "Tarifa acadêmica para pós-graduandos não filiados", "min_f": 0.65, "max_f": 0.78},
+        {"nome": "Pós-Doutorando / Pesquisador Residente", "desc": "Pesquisadores em pós-doutorado com declaração institucional", "min_f": 0.70, "max_f": 0.85},
+    ]
+
+    pool_docentes = [
+        {"nome": "Professor da Rede Pública", "desc": "Tarifa incentivada para professores da rede pública de ensino", "min_f": 0.45, "max_f": 0.65},
+        {"nome": "Professor / Pesquisador Universitário", "desc": "Docentes de instituições de ensino superior e centros de pesquisa", "min_f": 0.70, "max_f": 0.85},
+    ]
+
+    pool_isencoes = [
+        {"nome": "Palestrante / Autor Convidado", "desc": "Inscrição isenta para palestrantes convidados e palestrantes principais", "tipo": "isento"},
+        {"nome": "Palestrante Convidado", "desc": "Isenção total concedida aos conferencistas do evento", "tipo": "isento"},
+        {"nome": "Voluntário / Monitor do Evento", "desc": "Isenção de taxa para monitores e equipe de apoio do evento", "tipo": "isento"},
+        {"nome": "Comitê de Organização", "desc": "Credenciamento isento para comissão organizadora e comitê técnico", "tipo": "isento"},
+        {"nome": "Autor / Apresentador de Trabalho", "desc": "Autor com artigo aceito para apresentação nas sessões técnicas", "min_f": 0.35, "max_f": 0.60},
+    ]
+
+    pool_especiais = [
+        {"nome": "Participante Corporativo / Indústria", "desc": "Inscrição com rodada de negócios e credencial corporativa", "min_f": 1.10, "max_f": 1.35},
+        {"nome": "Participante Internacional", "desc": "Inscrição para congressistas e pesquisadores internacionais", "min_f": 1.15, "max_f": 1.40},
+        {"nome": "Inscrição Institucional / Premium", "desc": "Acesso VIP com coffee break exclusivo e kit de boas-vindas executivo", "min_f": 1.20, "max_f": 1.50},
     ]
 
     categorias = []
     cat_id_counter = 1
+
     for ev in eventos:
-        for tpl in cat_templates:
+        cats_evento_selecionadas = []
+        nomes_adicionados = set()
+
+        def add_categoria(tpl):
+            if tpl["nome"] in nomes_adicionados:
+                return
+            nomes_adicionados.add(tpl["nome"])
+
+            # Cálculo dinâmico do fator multiplicador de preço
+            if tpl.get("tipo") == "isento":
+                fator = Decimal("0.0000000")
+            elif tpl.get("tipo") == "base":
+                fator = Decimal("1.0000000")
+            else:
+                # Fator sorteado dentro da faixa com variação realista
+                min_f = tpl.get("min_f", 0.70)
+                max_f = tpl.get("max_f", 0.90)
+                val_pct = round(random.uniform(min_f, max_f), 2)
+                fator = Decimal(f"{val_pct:.7f}")
+
+            cats_evento_selecionadas.append({
+                "nome": tpl["nome"],
+                "desc": tpl["desc"],
+                "fator": fator,
+            })
+
+        # 1. Categorias garantidas por evento: 1 Geral, 1 Associado SBTC, 1 Graduação
+        add_categoria(random.choice(pool_profissionais_geral))
+        add_categoria(random.choice(pool_associados))
+        add_categoria(random.choice(pool_graduacao))
+
+        # 2. Pós-graduação na maioria dos eventos (~85%)
+        if random.random() < 0.85:
+            add_categoria(random.choice(pool_pos_graduacao))
+
+        # 3. Isenção / autor / palestrante convidado (~80%)
+        if random.random() < 0.80:
+            add_categoria(random.choice(pool_isencoes))
+
+        # 4. Docentes / Pesquisadores (~45%)
+        if random.random() < 0.45:
+            add_categoria(random.choice(pool_docentes))
+
+        # 5. Corporativo / Internacional / Premium (~40%)
+        if random.random() < 0.40:
+            add_categoria(random.choice(pool_especiais))
+
+        # 6. Eventualmente mais uma subcategoria diferenciada (~30%)
+        if random.random() < 0.30:
+            candidatos_extras = pool_graduacao + pool_pos_graduacao + pool_associados
+            random.shuffle(candidatos_extras)
+            for c in candidatos_extras:
+                if c["nome"] not in nomes_adicionados:
+                    add_categoria(c)
+                    break
+
+        # Gera os registros e queries para este evento
+        for c in cats_evento_selecionadas:
             cat_obj = {
                 "id": cat_id_counter,
                 "id_evento": ev["id"],
-                "nome": tpl["nome"],
-                "descricao": tpl["desc"],
-                "fator_mult_preco": tpl["fator"],
+                "nome": c["nome"],
+                "descricao": c["desc"],
+                "fator_mult_preco": c["fator"],
             }
             categorias.append(cat_obj)
             sql_statements.append(
                 f"INSERT INTO Categoria_inscricao (id, fator_mult_preco, nome, descricao, id_evento) VALUES "
-                f"({sql_val(cat_id_counter)}, {sql_val(tpl['fator'])}, {sql_val(tpl['nome'])}, "
-                f"{sql_val(tpl['desc'])}, {sql_val(ev['id'])});"
+                f"({sql_val(cat_id_counter)}, {sql_val(c['fator'])}, {sql_val(c['nome'])}, "
+                f"{sql_val(c['desc'])}, {sql_val(ev['id'])});"
             )
             cat_id_counter += 1
 
