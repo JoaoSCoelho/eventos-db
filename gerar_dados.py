@@ -1,6 +1,6 @@
 """
 Script para geração de dados sintéticos para o banco de dados (EventOS / SBTC).
-Utiliza a biblioteca Faker para popular as tabelas definidas em create-table.txt.
+Utiliza a biblioteca Faker para popular as tabelas definidas em ddl.sql.
 
 Gera comandos INSERT INTO em conformidade com PostgreSQL, garantindo integridade
 referencial, regras de negócio e restrições de unicidade.
@@ -760,8 +760,6 @@ def gerar_sql(
             tipo = random.choice(tipos_atividades)
             tema = random.choice(temas_atividades)
             nome_atv = f"{tipo}: {tema}"
-            capacidade = random.choice([40, 60, 100, 150, 250, None])
-
             # Minicursos costumam ter taxa adicional, palestras geralmente não
             if tipo == "Minicurso" and random.random() < 0.7:
                 preco_atv = Decimal(f"{random.randint(30, 80)}.00")
@@ -779,7 +777,6 @@ def gerar_sql(
 
             atividades.append({
                 "id": atv_id_counter,
-                "capacidade": capacidade,
                 "preco": preco_atv,
                 "dt_inicio": dt_inicio_atv,
                 "dt_fim": dt_fim_atv,
@@ -789,8 +786,8 @@ def gerar_sql(
             })
 
             sql_statements.append(
-                f"INSERT INTO Atividade (id, capacidade, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES "
-                f"({sql_val(atv_id_counter)}, {sql_val(capacidade)}, {sql_val(preco_atv)}, "
+                f"INSERT INTO Atividade (id, preco, dt_inicio, dt_fim, nome, tipo, id_categoria_inscricao) VALUES "
+                f"({sql_val(atv_id_counter)}, {sql_val(preco_atv)}, "
                 f"{sql_val(dt_inicio_atv)}, {sql_val(dt_fim_atv)}, {sql_val(nome_atv)}, "
                 f"{sql_val(tipo)}, {sql_val(id_cat)});"
             )
@@ -944,7 +941,6 @@ def gerar_sql(
 
             pag_obj = {
                 "id": pagamento_id_counter,
-                "tipo": "Inscrição",
                 "valor": valor_calculado,
                 "dt_criacao": dt_criacao,
                 "dt_confirmacao": dt_confirmacao,
@@ -956,8 +952,8 @@ def gerar_sql(
             pagamentos.append(pag_obj)
 
             sql_statements.append(
-                f"INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES "
-                f"({sql_val(pagamento_id_counter)}, {sql_val('Inscrição')}, {sql_val(valor_calculado)}, "
+                f"INSERT INTO Pagamento (id, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES "
+                f"({sql_val(pagamento_id_counter)}, {sql_val(valor_calculado)}, "
                 f"{sql_val(dt_criacao)}, {sql_val(dt_confirmacao)}, {sql_val(cod_tx)}, "
                 f"{sql_val(modalidade)}, NULL, {sql_val(it['id'])});"
             )
@@ -977,7 +973,6 @@ def gerar_sql(
 
             pag_obj = {
                 "id": pagamento_id_counter,
-                "tipo": "Inscrição",
                 "valor": valor_calculado,
                 "dt_criacao": dt_criacao,
                 "dt_confirmacao": None,
@@ -989,8 +984,8 @@ def gerar_sql(
             pagamentos.append(pag_obj)
 
             sql_statements.append(
-                f"INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES "
-                f"({sql_val(pagamento_id_counter)}, {sql_val('Inscrição')}, {sql_val(valor_calculado)}, "
+                f"INSERT INTO Pagamento (id, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES "
+                f"({sql_val(pagamento_id_counter)}, {sql_val(valor_calculado)}, "
                 f"{sql_val(dt_criacao)}, NULL, {sql_val(cod_tx)}, "
                 f"{sql_val(modalidade)}, NULL, {sql_val(it['id'])});"
             )
@@ -1028,8 +1023,8 @@ def gerar_sql(
             cod_tx_ref = gerar_cod_transacao("REF")
 
             sql_statements.append(
-                f"INSERT INTO Pagamento (id, tipo, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES "
-                f"({sql_val(pagamento_id_counter)}, {sql_val('Reembolso')}, {sql_val(valor_reembolso)}, "
+                f"INSERT INTO Pagamento (id, valor, dt_criacao, dt_confirmacao, cod_transacao, modalidade, id_reembolsa, id_item_financeiro) VALUES "
+                f"({sql_val(pagamento_id_counter)}, {sql_val(valor_reembolso)}, "
                 f"{sql_val(dt_criacao_ref)}, {sql_val(dt_conf_ref)}, {sql_val(cod_tx_ref)}, "
                 f"{sql_val('PIX')}, {sql_val(id_orig)}, {sql_val(it['id'])});"
             )

@@ -4,7 +4,7 @@ Repositório contendo o esquema relacional, script de geração de dados sintét
 
 ## Estrutura do Repositório
 
-- `create-table.sql`: Script DDL em PostgreSQL com a criação de tabelas, tipos de dados, chaves primárias, estrangeiras e restrições de integridade.
+- `ddl.sql`: Script DDL em PostgreSQL com a criação de tabelas, tipos de dados, chaves primárias, estrangeiras e restrições de integridade.
 - `gerar_dados.py`: Script Python que utiliza a biblioteca `Faker` para gerar dados sintéticos consistentes e com integridade referencial.
 - `inserts_banco_de_dados.sql`: Script SQL gerado contendo todos os comandos `INSERT INTO` prontos para execução em lote no PostgreSQL.
 
