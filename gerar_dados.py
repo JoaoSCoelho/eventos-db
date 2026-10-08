@@ -957,8 +957,8 @@ def gerar_sql(
         inscricoes.append(inscricao_dict)
 
         sql_statements.append(
-            f"INSERT INTO Inscricao (id, dt_confirmacao, dt_inscricao, id_categoria, id_pessoa) VALUES "
-            f"({sql_val(inscricao_id)}, {sql_val(dt_confirmacao)}, {sql_val(dt_inscricao)}, "
+            f"INSERT INTO Inscricao (id, dt_inscricao, id_categoria, id_pessoa) VALUES "
+            f"({sql_val(inscricao_id)}, {sql_val(dt_inscricao)}, "
             f"{sql_val(categoria['id'])}, {sql_val(pessoa['id'])});"
         )
         inscricao_id += 1
